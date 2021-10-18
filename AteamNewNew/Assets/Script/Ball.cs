@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
     {
         Rigidbody rb = this.transform.GetComponent<Rigidbody>();
 
-        Debug.Log(rb.velocity.magnitude);
+        //Debug.Log(rb.velocity.magnitude);
     }
 
     void FixedUpdate()
