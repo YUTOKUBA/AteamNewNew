@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7e3960cfadba945a8cca8298dca52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localGravity: {x: 0, y: -10, z: 0}
+  speed: 4
 --- !u!135 &1515312593
 SphereCollider:
   m_ObjectHideFlags: 0
