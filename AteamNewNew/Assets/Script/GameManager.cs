@@ -86,21 +86,24 @@ public class GameManager : MonoBehaviour
         }
 
         //シーンの管理
-        if (Menu_Num == 0 && Input.GetButtonDown("A"))
+        if (pauseUI.activeSelf)
         {
-            Time.timeScale = 1f;
-            Application.LoadLevel("Game");
-        }
-        else if (Menu_Num == 1 && Input.GetButtonDown("A"))
-        {
-            Time.timeScale = 1f;
-            Application.LoadLevel("Title");
-        }
-        else if (Menu_Num == 2 && Input.GetButtonDown("A"))
-        {
-            Time.timeScale = 1f;
-            UnityEditor.EditorApplication.isPlaying = false;
-            Application.Quit();
+            if (Menu_Num == 0 && Input.GetButtonDown("A"))
+            {
+                Time.timeScale = 1f;
+                Application.LoadLevel("Game");
+            }
+            else if (Menu_Num == 1 && Input.GetButtonDown("A"))
+            {
+                Time.timeScale = 1f;
+                Application.LoadLevel("Title");
+            }
+            else if (Menu_Num == 2 && Input.GetButtonDown("A"))
+            {
+                Time.timeScale = 1f;
+                UnityEditor.EditorApplication.isPlaying = false;
+                Application.Quit();
+            }
         }
     }
 }
