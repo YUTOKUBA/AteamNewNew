@@ -966,8 +966,8 @@ GameObject:
   - component: {fileID: 1515312595}
   - component: {fileID: 1515312594}
   - component: {fileID: 1515312593}
-  - component: {fileID: 1515312592}
   - component: {fileID: 1515312591}
+  - component: {fileID: 1515312592}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -1000,9 +1000,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1515312590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501a26e954f5cc1418b108708492b7a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b7e3960cfadba945a8cca8298dca52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  localGravity: {x: 0, y: -10, z: 0}
 --- !u!135 &1515312593
 SphereCollider:
   m_ObjectHideFlags: 0
