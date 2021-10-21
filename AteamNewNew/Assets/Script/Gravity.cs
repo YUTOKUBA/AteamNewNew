@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Gravity : MonoBehaviour
 {
-    public float speed = 20;        // 動く速さ
+    public float speed = 3;        // 動く速さ
 
     private Rigidbody rb;
 
