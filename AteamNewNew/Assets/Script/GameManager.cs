@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
             else if (Menu_Num == 2 && Input.GetButtonDown("A"))
             {
                 Time.timeScale = 1f;
-                UnityEditor.EditorApplication.isPlaying = false;
+               // UnityEditor.EditorApplication.isPlaying = false;
                 Application.Quit();
             }
         }
