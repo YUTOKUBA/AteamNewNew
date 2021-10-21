@@ -10,16 +10,12 @@ public class GameManager : MonoBehaviour
 
     public RectTransform pauseCursor;
 
-	[SerializeField]
-	private GameObject pauseRestart;
-	[SerializeField]
-	private GameObject pauseTitle;
-	[SerializeField]
-	private GameObject pauseEnd;
+    int Menu_Num = 0;   //メニュー選択時の番号　0:リスタート 1:タイトル 2:終了
 
-    int Menu_Num = 0;
+    bool Push_Flg = false; //連続入力防止用スイッチ
 
-    bool Push_Flg = false;
+    public GameObject x_object;
+    public GameObject y_object;
 
     void Start()
     {
@@ -28,8 +24,17 @@ public class GameManager : MonoBehaviour
 
 	void Update()
 	{
+        //Lスティックの入力
         float lsh = Input.GetAxis("L_stick_h");
         float lsv = Input.GetAxis("L_stick_v");
+
+        //デバッグ用
+        Text x_text = x_object.GetComponent<Text>();
+        Text y_text = y_object.GetComponent<Text>();
+        x_text.text = "X = " + lsv;
+        y_text.text = "Y = " + lsh;
+
+        //ポーズの表示
         if (Input.GetButtonDown("Pause"))
         {
             //　ポーズUIのアクティブ、非アクティブを切り替え
