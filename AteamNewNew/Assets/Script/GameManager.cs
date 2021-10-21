@@ -14,25 +14,44 @@ public class GameManager : MonoBehaviour
 
     bool Push_Flg = false; //連続入力防止用スイッチ
 
+    GameObject Ball;
+    coinkesu var;
+
+    public GameObject Score;
+
+    //デバッグ用
+    bool debug_mode = false;
     public GameObject x_object;
     public GameObject y_object;
 
     void Start()
     {
         pauseUI.SetActive(false);
+        x_object.SetActive(false);
+        y_object.SetActive(false);
     }
 
 	void Update()
 	{
+        //スコアの取得と表示
+        Ball = GameObject.Find("Ball");
+        var = Ball.GetComponent<coinkesu>();
+        Text score = Score.GetComponent<Text>();
+        score.text = "SCORE:" + var.coin;
+        
         //Lスティックの入力
         float lsh = Input.GetAxis("L_stick_h");
         float lsv = Input.GetAxis("L_stick_v");
 
         //デバッグ用
-        Text x_text = x_object.GetComponent<Text>();
-        Text y_text = y_object.GetComponent<Text>();
-        x_text.text = "X = " + lsv;
-        y_text.text = "Y = " + lsh;
+        if (debug_mode != false) {
+            x_object.SetActive(true);
+            y_object.SetActive(true);
+            Text x_text = x_object.GetComponent<Text>();
+            Text y_text = y_object.GetComponent<Text>();
+            x_text.text = "X = " + lsv;
+            y_text.text = "Y = " + lsh;
+        }
 
         //ポーズの表示
         if (Input.GetButtonDown("Pause"))
@@ -93,6 +112,18 @@ public class GameManager : MonoBehaviour
         //シーンの管理
         if (pauseUI.activeSelf)
         {
+            if (Input.GetButtonDown("X"))
+            {
+                if (debug_mode != true) {
+                    debug_mode = true;
+                }
+                else
+                {
+                    debug_mode = false;
+                    x_object.SetActive(false);
+                    y_object.SetActive(false);
+                }
+            }
             if (Menu_Num == 0 && Input.GetButtonDown("A"))
             {
                 Time.timeScale = 1f;
