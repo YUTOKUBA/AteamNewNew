@@ -17,7 +17,7 @@ public class Tilt : MonoBehaviour
     {
         float step = speed * Time.deltaTime;
         float back_step = back_speed * Time.deltaTime;
-        if (Input.GetAxisRaw("Vertical") == 1)
+        if (Input.GetAxisRaw("L_Stick_Y") == -1)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(30f, 0, 0), step);
         }
@@ -25,7 +25,7 @@ public class Tilt : MonoBehaviour
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(-30f, 0, 0), back_step);
         }
-        if (Input.GetAxisRaw("Vertical") == -1)
+        if (Input.GetAxisRaw("L_Stick_Y") == 1)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(-30f, 0, 0), step);
         }
@@ -33,7 +33,7 @@ public class Tilt : MonoBehaviour
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(30f, 0, 0), back_step);
         }
-        if (Input.GetAxisRaw("Horizontal") == -1)
+        if (Input.GetAxisRaw("L_Stick_X") == -1)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 30f), step);
         }
@@ -41,7 +41,7 @@ public class Tilt : MonoBehaviour
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, -30), back_step);
         }
-        if (Input.GetAxisRaw("Horizontal") == 1)
+        if (Input.GetAxisRaw("L_Stick_X") == 1)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, -30f), step);
         }
