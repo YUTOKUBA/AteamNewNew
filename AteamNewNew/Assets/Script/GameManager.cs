@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         }
 
         //シーンの管理
-        if (pauseUI.activeSelf)
+        if (pauseUI.activeSelf) //ポーズ画面が表示されているとき
         {
             if (Input.GetButtonDown("X"))
             {
@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
             else if (Menu_Num == 2 && Input.GetButtonDown("A"))
             {
                 Time.timeScale = 1f;
-               // UnityEditor.EditorApplication.isPlaying = false;
+               // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
                 Application.Quit();
             }
         }
