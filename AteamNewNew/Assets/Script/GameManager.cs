@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject Score;
 
+    [SerializeField]
+    private GameObject clear_UI;    //クリア画面
+
     //デバッグ用
     bool debug_mode = false;
     public GameObject x_object;
@@ -26,7 +29,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        //表示設定
         pauseUI.SetActive(false);
+        clear_UI.SetActive(false);
         x_object.SetActive(false);
         y_object.SetActive(false);
     }
@@ -37,7 +42,7 @@ public class GameManager : MonoBehaviour
         Ball = GameObject.Find("Ball");
         var = Ball.GetComponent<coinkesu>();
         Text score = Score.GetComponent<Text>();
-        score.text = "SCORE:" + var.coin;
+        score.text = var.coin + " / 12";
         
         //Lスティックの入力
         float lsh = Input.GetAxis("L_stick_h");
@@ -139,6 +144,15 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 1f;
                // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
                 Application.Quit();
+            }
+        }
+        //クリア画面の表示
+        if(var.coin == 12)
+        {
+            clear_UI.SetActive(true);
+            if (Input.GetButtonDown("A"))
+            {
+                Application.LoadLevel("Game");
             }
         }
     }
