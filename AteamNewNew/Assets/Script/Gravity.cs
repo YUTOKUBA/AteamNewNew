@@ -2,28 +2,35 @@
 using System.Collections;
 using UnityEngine;
 
+
 public class Gravity : MonoBehaviour
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     public float speed = 20;        // 動く速さ
 =======
     public float speed = 3;        // 動く速さ
 >>>>>>> ZAYASU
 
+=======
+    [SerializeField] private Vector3 localGravity;
+>>>>>>> ZAYASU
     private Rigidbody rb;
+    public float speed = 3;
 
-    void Start()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody>();         // Rigidbody を取得
+        rb = this.GetComponent<Rigidbody>();
+        rb.useGravity = false;          //最初にrigidBodyの重力を使わなくする
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        var moveHorizontal = Input.GetAxis("Horizontal");
-        var moveVertical = Input.GetAxis("Vertical");
+        SetLocalGravity();              //重力をAddForceでかけるメソッドを呼ぶ
+    }
 
-        var movement = new Vector3(moveHorizontal, 0, moveVertical);            // カーソルキーの入力に合わせて移動方向を設定
-
-        rb.AddForce(movement * speed);          //Rigidbodyに力を加える
+    private void SetLocalGravity()
+    {
+        rb.AddForce(localGravity * speed, ForceMode.Acceleration);      // 力を加える
     }
 }
