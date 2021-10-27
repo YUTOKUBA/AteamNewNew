@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Gravity : MonoBehaviour
 {
+<<<<<<< HEAD
     public float speed = 20;        // 動く速さ
+=======
+    public float speed = 3;        // 動く速さ
+>>>>>>> ZAYASU
 
     private Rigidbody rb;
 
