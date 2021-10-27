@@ -150,8 +150,10 @@ public class GameManager : MonoBehaviour
         if(var.coin == 12)
         {
             clear_UI.SetActive(true);
+            Time.timeScale = 0f;
             if (Input.GetButtonDown("A"))
             {
+                Time.timeScale = 1f;
                 Application.LoadLevel("Game");
             }
         }
