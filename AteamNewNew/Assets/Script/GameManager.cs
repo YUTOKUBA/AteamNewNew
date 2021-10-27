@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject clear_UI;    //クリア画面
+    bool Clear_flg;                 //クリアフラグ
 
     //デバッグ用
     bool debug_mode = false;
@@ -29,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        //クリア条件の初期化
+        Clear_flg = false;
         //表示設定
         pauseUI.SetActive(false);
         clear_UI.SetActive(false);
@@ -60,7 +63,7 @@ public class GameManager : MonoBehaviour
         }
 
         //ポーズの表示
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetButtonDown("Pause") && Clear_flg != true)
         {
             //　ポーズUIのアクティブ、非アクティブを切り替え
             pauseUI.SetActive(!pauseUI.activeSelf);
@@ -146,6 +149,7 @@ public class GameManager : MonoBehaviour
             else if (Menu_Num == 2 && Input.GetButtonDown("A"))
             {
                 Time.timeScale = 1f;
+                pauseUI.SetActive(!pauseUI.activeSelf);
                 // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
                 Application.Quit();
             }
@@ -153,11 +157,13 @@ public class GameManager : MonoBehaviour
         //クリア画面の表示
         if (var.coin == 12)
         {
-            clear_UI.SetActive(true);
-            Time.timeScale = 0f;
+            clear_UI.SetActive(true);   //クリア画面の表示
+            Clear_flg = true;           //クリアフラグをON
+            Time.timeScale = 0f;        //ゲームを停止
             if (Input.GetButtonDown("A"))
             {
                 Time.timeScale = 1f;
+                Clear_flg = false;
                 Application.LoadLevel("Game");
             }
         }
