@@ -4,17 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Tilt : MonoBehaviour
 {
-    private Transform target;
-    public float speed = 90f;
-    public float back_speed = 60f;
-    bool keyon = false;
+    public float speed = 82f;
+    public float back_speed = 125f;
     public float time;
     public Text TimeText;
 
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.Find("Cube").transform;
         time = 0.0f;
     }
     // Update is called once per frame
@@ -23,6 +20,7 @@ public class Tilt : MonoBehaviour
 
         float step = speed * Time.deltaTime;
         float back_step = back_speed * Time.deltaTime;
+
         if (Input.GetAxisRaw("L_Stick_Y") == -1)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(30f, 0, 0), step);
@@ -59,5 +57,7 @@ public class Tilt : MonoBehaviour
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 30f), back_step);
         }
+
+        Debug.Log(1 / Time.deltaTime);
     }
 }

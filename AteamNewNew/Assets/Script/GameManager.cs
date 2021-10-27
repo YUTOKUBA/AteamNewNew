@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject clear_UI;    //クリア画面
+    bool Clear_flg;                 //クリアフラグ
 
     //デバッグ用
     bool debug_mode = false;
@@ -29,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        //クリア条件の初期化
+        Clear_flg = false;
         //表示設定
         pauseUI.SetActive(false);
         clear_UI.SetActive(false);
@@ -36,20 +39,21 @@ public class GameManager : MonoBehaviour
         y_object.SetActive(false);
     }
 
-	void Update()
-	{
+    void Update()
+    {
         //スコアの取得と表示
         Ball = GameObject.Find("Ball");
         var = Ball.GetComponent<coinkesu>();
         Text score = Score.GetComponent<Text>();
         score.text = var.coin + " / 12";
-        
+
         //Lスティックの入力
         float lsh = Input.GetAxis("L_stick_h");
         float lsv = Input.GetAxis("L_stick_v");
 
         //デバッグ用
-        if (debug_mode != false) {
+        if (debug_mode != false)
+        {
             x_object.SetActive(true);
             y_object.SetActive(true);
             Text x_text = x_object.GetComponent<Text>();
@@ -59,7 +63,7 @@ public class GameManager : MonoBehaviour
         }
 
         //ポーズの表示
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetButtonDown("Pause") && Clear_flg != true)
         {
             //　ポーズUIのアクティブ、非アクティブを切り替え
             pauseUI.SetActive(!pauseUI.activeSelf);
@@ -82,7 +86,8 @@ public class GameManager : MonoBehaviour
         {
             if (lsv == 1)
             {
-                if (Push_Flg == false) {
+                if (Push_Flg == false)
+                {
                     Push_Flg = true;
                     Menu_Num++;
                     if (Menu_Num >= 3)
@@ -96,7 +101,8 @@ public class GameManager : MonoBehaviour
             }
             else if (lsv == -1)
             {
-                if (Push_Flg == false) {
+                if (Push_Flg == false)
+                {
                     Push_Flg = true;
                     Menu_Num--;
                     if (Menu_Num <= -1)
@@ -119,7 +125,8 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetButtonDown("X"))
             {
-                if (debug_mode != true) {
+                if (debug_mode != true)
+                {
                     debug_mode = true;
                 }
                 else
@@ -142,16 +149,21 @@ public class GameManager : MonoBehaviour
             else if (Menu_Num == 2 && Input.GetButtonDown("A"))
             {
                 Time.timeScale = 1f;
-               // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
+                pauseUI.SetActive(!pauseUI.activeSelf);
+                // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
                 Application.Quit();
             }
         }
         //クリア画面の表示
-        if(var.coin == 12)
+        if (var.coin == 12)
         {
-            clear_UI.SetActive(true);
+            clear_UI.SetActive(true);   //クリア画面の表示
+            Clear_flg = true;           //クリアフラグをON
+            Time.timeScale = 0f;        //ゲームを停止
             if (Input.GetButtonDown("A"))
             {
+                Time.timeScale = 1f;
+                Clear_flg = false;
                 Application.LoadLevel("Game");
             }
         }
