@@ -5,16 +5,7 @@ using UnityEngine;
 
 public class Gravity : MonoBehaviour
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public float speed = 20;        // 動く速さ
-=======
-    public float speed = 3;        // 動く速さ
->>>>>>> ZAYASU
-
-=======
     [SerializeField] private Vector3 localGravity;
->>>>>>> ZAYASU
     private Rigidbody rb;
     public float speed = 3;
 
