@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +23,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject clear_UI;    //クリア画面
     bool Clear_flg;                 //クリアフラグ
+
+    [SerializeField]Animator Clear_animator;
+    [SerializeField]Animator Result_animator;
 
     //デバッグ用
     bool debug_mode = false;
@@ -154,14 +158,20 @@ public class GameManager : MonoBehaviour
                 Application.Quit();
             }
         }
+
+
         //クリア画面の表示
         if (var.coin == 12)
-        {
+        {        
             clear_UI.SetActive(true);   //クリア画面の表示
             Clear_flg = true;           //クリアフラグをON
             Time.timeScale = 0f;        //ゲームを停止
+            Clear_animator.SetBool("IsCenter",true);   //アニメーションの表示
+            Result_animator.SetTrigger("IsZoom");      //
+
             if (Input.GetButtonDown("A"))
             {
+                Clear_animator.SetBool("IsCenter", false);//アニメーションの非表示
                 Time.timeScale = 1f;
                 Clear_flg = false;
                 Application.LoadLevel("Game");
