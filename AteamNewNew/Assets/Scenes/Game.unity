@@ -1119,7 +1119,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.4150417, y: 1}
+    m_SensorSize: {x: 1.9719101, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1135,7 +1135,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656437992}
-  m_LocalRotation: {x: 0.31765613, y: 0.00000001252825, z: -0.0000000041970583, w: 0.948206}
+  m_LocalRotation: {x: 0, y: -0.00000003710494, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: -2.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1315,8 +1315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 90
   back_speed: 60
-  time: 0
-  TimeText: {fileID: 0}
 --- !u!1 &906651065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1330,7 @@ GameObject:
   - component: {fileID: 906651070}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1516,7 +1514,7 @@ GameObject:
   - component: {fileID: 910122549}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2558,6 +2556,7 @@ GameObject:
   - component: {fileID: 1387464634}
   - component: {fileID: 1387464633}
   - component: {fileID: 1387464632}
+  - component: {fileID: 1387464631}
   m_Layer: 0
   m_Name: dodai
   m_TagString: Untagged
@@ -2565,6 +2564,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &1387464631
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387464630}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &1387464632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2650,7 +2665,7 @@ GameObject:
   - component: {fileID: 1478617611}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2831,7 +2846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7e3960cfadba945a8cca8298dca52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localGravity: {x: 0, y: -9.81, z: 0}
   speed: 4
 --- !u!135 &1515312593
 SphereCollider:
@@ -2901,7 +2915,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515312590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2947,7 +2961,7 @@ GameObject:
   - component: {fileID: 1574011609}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3546,7 +3560,7 @@ GameObject:
   - component: {fileID: 1757665362}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3828,6 +3842,7 @@ GameObject:
   - component: {fileID: 1776901731}
   - component: {fileID: 1776901730}
   - component: {fileID: 1776901733}
+  - component: {fileID: 1776901734}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3893,7 +3908,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776901729}
-  m_LocalRotation: {x: 0.31765613, y: 0.00000001252825, z: -0.0000000041970583, w: 0.948206}
+  m_LocalRotation: {x: 0, y: -0.00000003710494, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: -2.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3934,6 +3949,15 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!45 &1776901734
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776901729}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 77715b8b6b248994891d3ccad1ad330b, type: 2}
 --- !u!1 &1885804623
 GameObject:
   m_ObjectHideFlags: 0
