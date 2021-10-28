@@ -19,40 +19,30 @@ public class Tilt : MonoBehaviour
         float step = speed * Time.deltaTime;
         float back_step = back_speed * Time.deltaTime;
 
-        if (Input.GetAxisRaw("L_Stick_Y") == -1)
+        if (Input.GetAxisRaw("L_Stick_Y") != 0 || Input.GetAxisRaw("L_Stick_X") != 0)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(30f, 0, 0), step);
-        }
-        else
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(-30f, 0, 0), back_step);
-        }
+            if (Input.GetAxisRaw("L_Stick_Y") < 0)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(30f, 0, 0), step);
+            }
+            if (Input.GetAxisRaw("L_Stick_Y") > 0)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(-30f, 0, 0), step);
+            }
 
-        if (Input.GetAxisRaw("L_Stick_Y") == 1)
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(-30f, 0, 0), step);
-        }
-        else
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(30f, 0, 0), back_step);
-        }
+            if (Input.GetAxisRaw("L_Stick_X") < 0)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 30f), step);
+            }
+            if (Input.GetAxisRaw("L_Stick_X") > 0)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, -30f), step);
+            }
 
-        if (Input.GetAxisRaw("L_Stick_X") == -1)
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 30f), step);
         }
-        else
+        else if(Input.GetAxisRaw("L_Stick_Y") == 0 && Input.GetAxisRaw("L_Stick_X") == 0)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, -30), back_step);
-        }
-
-        if (Input.GetAxisRaw("L_Stick_X") == 1)
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, -30f), step);
-        }
-        else
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 30f), back_step);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 0), back_step);
         }
 
         Debug.Log(1 / Time.deltaTime);
