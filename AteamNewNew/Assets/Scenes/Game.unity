@@ -472,6 +472,8 @@ MonoBehaviour:
   pauseCursor: {fileID: 1642087625}
   Score: {fileID: 1575959304}
   clear_UI: {fileID: 726086427}
+  Clear_animator: {fileID: 1762581683}
+  Result_animator: {fileID: 0}
   x_object: {fileID: 946688083}
   y_object: {fileID: 909853206}
 --- !u!4 &141664349
@@ -3472,6 +3474,7 @@ GameObject:
   - component: {fileID: 1762581680}
   - component: {fileID: 1762581682}
   - component: {fileID: 1762581681}
+  - component: {fileID: 1762581683}
   m_Layer: 5
   m_Name: Game_Clear
   m_TagString: Untagged
@@ -3534,6 +3537,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762581679}
   m_CullTransparentMesh: 0
+--- !u!95 &1762581683
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762581679}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a671cdebe9be0940ad2be51c3dc6d57, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1775622996
 GameObject:
   m_ObjectHideFlags: 0
