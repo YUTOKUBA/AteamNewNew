@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     private GameObject clear_UI;    //クリア画面
     bool Clear_flg;                 //クリアフラグ
 
+    [SerializeField]
+    Animator Clear_animator;
+    //bool if_animator = true;
+
     //デバッグ用
     bool debug_mode = false;
     public GameObject x_object;
@@ -41,6 +45,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
         //スコアの取得と表示
         Ball = GameObject.Find("Ball");
         var = Ball.GetComponent<coinkesu>();
@@ -154,14 +159,21 @@ public class GameManager : MonoBehaviour
                 Application.Quit();
             }
         }
+
+
         //クリア画面の表示
         if (var.coin == 12)
         {
             clear_UI.SetActive(true);   //クリア画面の表示
             Clear_flg = true;           //クリアフラグをON
             Time.timeScale = 0f;        //ゲームを停止
+            //if (if_animator == true) {
+                Clear_animator.SetBool("IsCenter",true);   //アニメーションの表示
+              //  if_animator = false;
+            //}
             if (Input.GetButtonDown("A"))
             {
+                Clear_animator.SetBool("IsCenter", false);//アニメーションの非表示
                 Time.timeScale = 1f;
                 Clear_flg = false;
                 Application.LoadLevel("Game");
