@@ -1301,8 +1301,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 90
   back_speed: 60
-  time: 0
-  TimeText: {fileID: 0}
 --- !u!1 &906651065
 GameObject:
   m_ObjectHideFlags: 0
