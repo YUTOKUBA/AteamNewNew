@@ -468,6 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd88b46410718014084ee8ae3c4723fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Start_flg: 0
   pauseUI: {fileID: 8759387}
   pauseCursor: {fileID: 1642087625}
   Score: {fileID: 1575959304}
@@ -1196,7 +1197,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9719101, y: 1}
+    m_SensorSize: {x: 2.4150417, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1212,7 +1213,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656437992}
-  m_LocalRotation: {x: -0.4500872, y: 0.00000000369624, z: 0.0000000018629998, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.000000021729441, z: -0.0000000109521965,
+    w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2245,7 +2247,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108871585
 GameObject:
@@ -3549,7 +3551,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1635583617
 MonoBehaviour:
@@ -4167,7 +4169,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776901729}
-  m_LocalRotation: {x: -0.4500872, y: 0.00000000369624, z: 0.0000000018629998, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.000000021729441, z: -0.0000000109521965,
+    w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

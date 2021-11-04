@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     //スタート画面
-    bool Start_flg;                 //スタートフラグ
+    public bool Start_flg;                 //スタートフラグ
 
     //ポーズ画面
     [SerializeField]private GameObject pauseUI; //ポーズ画面
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         score.text = var.coin + " / 12";
         
         //ポーズの表示
-        if (Input.GetButtonDown("Pause") && Clear_flg != true)
+        if (Input.GetButtonDown("Pause") && Clear_flg != true && Start_flg != true)
         {
             Game_Pause();
         }
@@ -78,7 +78,6 @@ public class GameManager : MonoBehaviour
     public void Game_Start()
     {
         Start_animator.SetBool("Count_Start",true);
-        Start_flg = false;
     }
 
     public void Game_Pause()

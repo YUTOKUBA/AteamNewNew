@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CountDown_Animation : MonoBehaviour
 {
+
+    GameObject gamemanager;    //スコアが入っているオブジェクト
+    GameManager var;       //空箱
+
     public void StartCountDown()
     {
         //カウントダウン開始時に行いたい処理
@@ -11,7 +15,11 @@ public class CountDown_Animation : MonoBehaviour
     }
     public void CompletedCountDown()
     {
+        gamemanager = GameObject.Find("GameManager");
+        var = gamemanager.GetComponent<GameManager>();
+
         //カウントダウン終了後に行いたい処理
         Time.timeScale = 1.0f;
+        var.Start_flg = false;
     }
 }
