@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     //スタート画面
-    [SerializeField] private GameObject start_UI;    //スタート画面
     bool Start_flg;                 //スタートフラグ
 
     //ポーズ画面
@@ -26,8 +25,8 @@ public class GameManager : MonoBehaviour
     bool Clear_flg;                 //クリアフラグ
 
     //アニメーション
-    [SerializeField]Animator Clear_animator;
-    [SerializeField]Animator Result_animator;
+    [SerializeField] Animator Start_animator;
+    [SerializeField] Animator Clear_animator;
 
     //デバッグ用
     bool debug_mode = false;
@@ -54,7 +53,6 @@ public class GameManager : MonoBehaviour
         if (Start_flg == true)
         {
             Game_Start();
-            Start_flg = false;
         }
         Pause_Controller();
 
@@ -77,12 +75,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Game_Start()
+    public void Game_Start()
     {
-
+        Start_animator.SetBool("Count_Start",true);
+        Start_flg = false;
     }
 
-    void Game_Pause()
+    public void Game_Pause()
     {
         //　ポーズUIのアクティブ、非アクティブを切り替え
         pauseUI.SetActive(!pauseUI.activeSelf);
@@ -100,7 +99,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void Pause_Controller()
+    public void Pause_Controller()
     {
         //Lスティックの入力
         float lsh = Input.GetAxis("L_stick_h");
@@ -193,14 +192,14 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void Game_Clear()
+    public void Game_Clear()
     {
 
         clear_UI.SetActive(true);   //クリア画面の表示
         Clear_flg = true;           //クリアフラグをON
         Time.timeScale = 0f;        //ゲームを停止
         Clear_animator.SetBool("IsCenter", true);   //アニメーションの表示
-        Result_animator.SetTrigger("IsZoom");      //
+        //Start_animator.SetBool("Count_Start", false);
 
         if (Input.GetButtonDown("A"))
         {
