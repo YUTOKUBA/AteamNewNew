@@ -436,6 +436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 838762091}
+  - component: {fileID: 838762093}
   - component: {fileID: 838762092}
   m_Layer: 0
   m_Name: DODAI
@@ -472,8 +473,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556c0118ffc61694a9c94fbf57c078ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 82
-  back_speed: 125
+  speed: 0
+  add_speed: 0.445
+  decelerate_speed: 0.6
+  max_speed: 36
+  step: 0
+  stop: 1
+  decelerate: 0
+  stop_0: 1
+  change: 0
+--- !u!114 &838762093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838762090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a8e3406f695d0438424d16d0e66132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &906651065
 GameObject:
   m_ObjectHideFlags: 0
