@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
     //スタート画面
     public bool Start_flg;                 //スタートフラグ
 
+    //時間経過
+    [SerializeField]private int minute;
+    [SerializeField] private int Clear_minute;
+    [SerializeField]private float seconds;
+    [SerializeField] private float Clear_seconds;
+
     //ポーズ画面
     [SerializeField]private GameObject pauseUI; //ポーズ画面
     public RectTransform pauseCursor;           //カーソル
@@ -24,6 +30,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]private GameObject clear_UI;    //クリア画面
     bool Clear_flg;                 //クリアフラグ
 
+    //リザルト画面
+    public GameObject Score_coin;    //表示用
+    public GameObject Score_time;    //表示用
+
     //アニメーション
     [SerializeField] Animator Start_animator;
     [SerializeField] Animator Clear_animator;
@@ -37,6 +47,13 @@ public class GameManager : MonoBehaviour
     {
         //スタート条件の初期化
         Start_flg = true;
+
+        //経過時間の初期化
+        minute = 0;
+        Clear_minute = 0;
+        seconds = 0f;
+        Clear_seconds = 0f;
+
         //クリア条件の初期化
         Clear_flg = false;
 
@@ -61,7 +78,15 @@ public class GameManager : MonoBehaviour
         var = Ball.GetComponent<coinkesu>();
         Text score = Score.GetComponent<Text>();
         score.text = var.coin + " / 12";
-        
+
+        //経過時間の計測
+        seconds += Time.deltaTime;
+        if (seconds >= 60f)
+        {
+            minute++;
+            seconds = seconds - 60;
+        }
+
         //ポーズの表示
         if (Input.GetButtonDown("Pause") && Clear_flg != true && Start_flg != true)
         {
@@ -71,6 +96,8 @@ public class GameManager : MonoBehaviour
         //クリア画面の表示
         if (var.coin == 12)
         {
+            Clear_minute = minute;
+            Clear_seconds = seconds;
             Game_Clear();
         }
     }
@@ -198,8 +225,22 @@ public class GameManager : MonoBehaviour
         Clear_flg = true;           //クリアフラグをON
         Time.timeScale = 0f;        //ゲームを停止
         Clear_animator.SetBool("IsCenter", true);   //アニメーションの表示
-        //Start_animator.SetBool("Count_Start", false);
 
+        //リザルト画面の表示
+        Text score_time = Score_time.GetComponent<Text>();//クリアタイムの表示
+        if ((int)Clear_seconds < 10)
+        {
+            score_time.text = Clear_minute + " : 0" + (int)Clear_seconds;
+        }
+        else
+        {
+            score_time.text = Clear_minute + " : " + (int)Clear_seconds;
+        }
+
+        Text score_coin = Score_coin.GetComponent<Text>();//コインの枚数
+        score_coin.text = var.coin + "枚";
+
+        //ReStart
         if (Input.GetButtonDown("A"))
         {
             Clear_animator.SetBool("IsCenter", false);//アニメーションの非表示
@@ -207,5 +248,9 @@ public class GameManager : MonoBehaviour
             Clear_flg = false;
             Application.LoadLevel("Game");
         }
+    }
+    public void Retry_menu()
+    {
+
     }
 }
