@@ -34,6 +34,12 @@ public class GameManager : MonoBehaviour
     public GameObject Score_coin;    //表示用
     public GameObject Score_time;    //表示用
 
+    //リトライ画面
+    [SerializeField] private GameObject retryUI; //ポーズ画面
+    public RectTransform retryCursor;           //カーソル
+    bool Retry_flg = false;
+    int Retry_Num = 0;   //メニュー選択時の番号　0:リスタート 1:タイトル 2:終了
+
     //アニメーション
     [SerializeField] Animator Start_animator;
     [SerializeField] Animator Clear_animator;
@@ -57,9 +63,12 @@ public class GameManager : MonoBehaviour
         //クリア条件の初期化
         Clear_flg = false;
 
+        Retry_flg = false;
+
         //表示設定
         pauseUI.SetActive(false);
         clear_UI.SetActive(false);
+        retryUI.SetActive(false);
         x_object.SetActive(false);
         y_object.SetActive(false);
     }
@@ -94,7 +103,11 @@ public class GameManager : MonoBehaviour
         }
         
         //クリア画面の表示
-        if (var.coin == 12)
+        if (var.coin == 12 && Retry_flg == true)
+        {
+            Retry_menu();
+        }
+        else if (var.coin == 12)
         {
             Clear_minute = minute;
             Clear_seconds = seconds;
@@ -246,11 +259,91 @@ public class GameManager : MonoBehaviour
             Clear_animator.SetBool("IsCenter", false);//アニメーションの非表示
             Time.timeScale = 1f;
             Clear_flg = false;
-            Application.LoadLevel("Game");
+            Retry_flg = true;
         }
     }
     public void Retry_menu()
     {
+        //　リトライUIのアクティブに切り替え
+        retryUI.SetActive(!pauseUI.activeSelf);
 
+        //　リトライUIが表示されてる時は停止
+        if (retryUI.activeSelf)
+        {
+            Time.timeScale = 0f;
+            //　リトライUIが表示されてなければ通常通り進行
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
+    public void Retry_Controller()
+    {
+        //Lスティックの入力
+        float lsh = Input.GetAxis("L_stick_h");
+        float lsv = Input.GetAxis("L_stick_v");
+
+        //カーソルのの操作
+        if (retryUI.activeSelf)
+        {
+            if (lsv == 1)
+            {
+                if (Push_Flg == false)
+                {
+                    Push_Flg = true;
+                    Retry_Num++;
+                    if (Retry_Num >= 3)
+                    {
+                        Retry_Num = 0;
+                        retryCursor.position += new Vector3(0, 180, 0);
+                    }
+                    retryCursor.position += new Vector3(0, -60, 0);
+                    Debug.Log(Retry_Num);
+                }
+            }
+            else if (lsv == -1)
+            {
+                if (Push_Flg == false)
+                {
+                    Push_Flg = true;
+                    Retry_Num--;
+                    if (Retry_Num <= -1)
+                    {
+                        Retry_Num = 2;
+                        retryCursor.position += new Vector3(0, -180, 0);
+                    }
+                    retryCursor.position += new Vector3(0, 60, 0);
+                    Debug.Log(Retry_Num);
+                }
+            }
+            else
+            {
+                Push_Flg = false;
+            }
+        }
+
+        //シーンの管理
+        if (retryUI.activeSelf) //ポーズ画面が表示されているとき
+        {
+            
+            if (Retry_Num == 0 && Input.GetButtonDown("A"))
+            {
+                Time.timeScale = 1f;
+                Application.LoadLevel("Game");
+            }
+            else if (Retry_Num == 1 && Input.GetButtonDown("A"))
+            {
+                Time.timeScale = 1f;
+                Application.LoadLevel("Title");
+            }
+            else if (Retry_Num == 2 && Input.GetButtonDown("A"))
+            {
+                Time.timeScale = 1f;
+                retryUI.SetActive(!retryUI.activeSelf);
+                // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
+                Application.Quit();
+            }
+        }
     }
 }
