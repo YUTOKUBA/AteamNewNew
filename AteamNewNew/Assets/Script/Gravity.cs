@@ -1,58 +1,6 @@
-﻿//using System.Collections.Generic;
-//using System.Collections;
-//using UnityEngine;
-
-
-//public class Gravity : MonoBehaviour
-//{
-//    [SerializeField] private Vector3 localGravity;
-//    private Rigidbody rb;
-//    public float speed = 3;
-
-//    private void Start()
-//    {
-//        rb = this.GetComponent<Rigidbody>();
-//        rb.useGravity = false;          //最初にrigidBodyの重力を使わなくする
-//    }
-
-//    private void FixedUpdate()
-//    {
-//        SetLocalGravity();              //重力をAddForceでかけるメソッドを呼ぶ
-//    }
-
-//    private void SetLocalGravity()
-//    {
-//        rb.AddForce(localGravity * speed, ForceMode.Acceleration);      // 力を加える
-//    }
-//}
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
-
-public class Gravity : MonoBehaviour
-{
-    public float speed = 20;        // 動く速さ
-
-    private Rigidbody rb;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();         // Rigidbody を取得
-    }
-
-    void Update()
-    {
-        var moveHorizontal = Input.GetAxis("Horizontal");
-        var moveVertical = Input.GetAxis("Vertical");
-
-        var movement = new Vector3(moveHorizontal, 0, moveVertical);            // カーソルキーの入力に合わせて移動方向を設定
-
-        rb.AddForce(movement * speed);          //Rigidbodyに力を加える
-=======
-using UnityEngine.Events;
-
 public class Gravity : MonoBehaviour
 {
     [SerializeField, Tooltip("重力値")]
@@ -65,7 +13,7 @@ public class Gravity : MonoBehaviour
 
     void Update()
     {
-        HitCheck();
+        //HitCheck();
 
         //空中の時重力をかける
         if (velocity.y > 0 || transform.position.y != 0)
@@ -89,6 +37,5 @@ public class Gravity : MonoBehaviour
     public void AddForce(Vector3 alpha)
     {
         velocity += alpha;
->>>>>>> ZAYASU
     }
 }
