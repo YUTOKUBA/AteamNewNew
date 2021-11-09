@@ -113,6 +113,7 @@ public class GameManager : MonoBehaviour
             Clear_seconds = seconds;
             Game_Clear();
         }
+        Retry_Controller();
     }
 
     public void Game_Start()
@@ -256,28 +257,19 @@ public class GameManager : MonoBehaviour
         //ReStart
         if (Input.GetButtonDown("A"))
         {
-            Clear_animator.SetBool("IsCenter", false);//アニメーションの非表示
-            Time.timeScale = 1f;
-            Clear_flg = false;
+            clear_UI.SetActive(false);
             Retry_flg = true;
         }
     }
+
     public void Retry_menu()
     {
-        //　リトライUIのアクティブに切り替え
-        retryUI.SetActive(!pauseUI.activeSelf);
-
-        //　リトライUIが表示されてる時は停止
-        if (retryUI.activeSelf)
-        {
-            Time.timeScale = 0f;
-            //　リトライUIが表示されてなければ通常通り進行
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
+        //リトライUIのアクティブに切り替え
+        retryUI.SetActive(true);
+        //リトライUI表示中は停止
+        Time.timeScale = 0f;
     }
+
     public void Retry_Controller()
     {
         //Lスティックの入力
@@ -340,7 +332,6 @@ public class GameManager : MonoBehaviour
             else if (Retry_Num == 2 && Input.GetButtonDown("A"))
             {
                 Time.timeScale = 1f;
-                retryUI.SetActive(!retryUI.activeSelf);
                 // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
                 Application.Quit();
             }
