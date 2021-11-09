@@ -45,6 +45,6 @@ public class Tilt : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 0), back_step);
         }
 
-        Debug.Log(1 / Time.deltaTime);
+        //Debug.Log(1 / Time.deltaTime);
     }
 }
