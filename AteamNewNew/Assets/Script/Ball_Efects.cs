@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball_Efects : MonoBehaviour
 {
     [SerializeField]
     private ParticleSystem footSmoke;
+    [SerializeField]
+    private ParticleSystem shock_wave;
+    [SerializeField]
+    private ParticleSystem sparkle;
     private Rigidbody rb;
     void Start()
     {
@@ -33,6 +38,19 @@ public class Ball_Efects : MonoBehaviour
                     footSmoke.Stop();
                 }
             }
+        }
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Wall")
+        { 
+            shock_wave.transform.position = this.transform.position;
+            shock_wave.Play();
+        }
+        if (other.gameObject.tag == "cube")
+        {
+            sparkle.transform.position = this.transform.position;
+            sparkle.Play();
         }
     }
 }
