@@ -13,7 +13,7 @@ public class SceneChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (Input.GetButtonDown("A"))
+         if (Input.anyKeyDown)
         {
             Application.LoadLevel("Game");
         }
