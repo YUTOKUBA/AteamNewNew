@@ -6790,7 +6790,7 @@ MonoBehaviour:
     m_SensorSize: {x: 2.4679666, y: 1}
 
     m_SensorSize: {x: 2.0963855, y: 1}
->>>>>>> higa
+
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6812,7 +6812,7 @@ Transform:
 
   m_LocalRotation: {x: 0.31765613, y: -0.000000023630886, z: 0.000000007916525, w: 0.948206}
   m_LocalPosition: {x: 0, y: 4, z: -2.65}
->>>>>>> higa
+
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 946646195}
@@ -7102,7 +7102,7 @@ MonoBehaviour:
 
   speed: 90
   back_speed: 60
->>>>>>> higa
+
 --- !u!1 &906651065
 GameObject:
   m_ObjectHideFlags: 0
@@ -7591,7 +7591,7 @@ MonoBehaviour:
 --- !u!1 &944033102
 
 --- !u!1 &946646194
->>>>>>> higa
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7969,7 +7969,7 @@ GameObject:
   Oneshotaudio: 0
   cnt: 0
 --- !u!82 &955535063
->>>>>>> higa
+
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7987,7 +7987,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c952c74dd0dfb5c44b632b0c5564c936, type: 3}
->>>>>>> higa
+
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8362,7 +8362,7 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cd5599e01f32bd418f20a3b9eac1c57, type: 3}
 
->>>>>>> higa
+
 --- !u!1 &1108871585
 GameObject:
   m_ObjectHideFlags: 0
@@ -9971,7 +9971,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -292, y: 180.8}
->>>>>>> higa
+
   m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1575959306
@@ -10654,7 +10654,7 @@ GameObject:
 
   - component: {fileID: 1757665365}
   - component: {fileID: 1757665366}
->>>>>>> higa
+
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Wall
@@ -10846,7 +10846,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
->>>>>>> higa
+
 --- !u!1 &1762581679
 GameObject:
   m_ObjectHideFlags: 0
@@ -10961,7 +10961,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -416, y: 188}
->>>>>>> higa
+
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1775622998
@@ -11108,7 +11108,7 @@ Transform:
 
   m_LocalRotation: {x: 0.31765613, y: -0.000000023630886, z: 0.000000007916525, w: 0.948206}
   m_LocalPosition: {x: 0, y: 4, z: -2.65}
->>>>>>> higa
+
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11632,7 +11632,7 @@ GameObject:
   cnt: 0
 --- !u!82 &1957291857
 AudioSource:
->>>>>>> higa
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12098,4 +12098,4 @@ PrefabInstance:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
->>>>>>> higa
+
