@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     //クリア
     [SerializeField]private GameObject clear_UI;    //クリア画面
+    [SerializeField] private ParticleSystem Clear_particle; //紙吹雪のパーティクル
+    bool Clear_particle_flg;        //パーティクルのフラグ
     bool Clear_flg;                 //クリアフラグ
 
     //リザルト画面
@@ -62,6 +64,7 @@ public class GameManager : MonoBehaviour
 
         //クリア条件の初期化
         Clear_flg = false;
+        Clear_particle_flg = false;
 
         Retry_flg = false;
 
@@ -239,7 +242,11 @@ public class GameManager : MonoBehaviour
         Clear_flg = true;           //クリアフラグをON
         Time.timeScale = 0f;        //ゲームを停止
         Clear_animator.SetBool("IsCenter", true);   //アニメーションの表示
-
+        if (Clear_particle_flg == false)    //紙吹雪を一度だけ呼び出す
+        {
+            Clear_particle.Play();
+            Clear_particle_flg = true;
+        }
         //リザルト画面の表示
         Text score_time = Score_time.GetComponent<Text>();//クリアタイムの表示
         if ((int)Clear_seconds < 10)
