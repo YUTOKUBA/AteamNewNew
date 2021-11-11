@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class Ball_Efects : MonoBehaviour
 {
     [SerializeField]
-    private ParticleSystem footSmoke;
+    private ParticleSystem footSmoke;   //砂埃のエフェクト
     [SerializeField]
-    private ParticleSystem shock_wave;
+    private ParticleSystem shock_wave;  //壁に当たった際のエフェクト
     [SerializeField]
-    private ParticleSystem sparkle;
+    private ParticleSystem sparkle;     //コインを取得した際のエフェクト
+
     private Rigidbody rb;
     void Start()
     {
@@ -19,6 +20,7 @@ public class Ball_Efects : MonoBehaviour
 
     void OnCollisionStay(Collision col)
     {
+        //砂埃エフェクト
         if (col.gameObject.tag == "Floor")
         {
             // 速度が0.1以上なら
@@ -41,12 +43,14 @@ public class Ball_Efects : MonoBehaviour
         }
     }
     private void OnCollisionEnter(Collision other)
-    {
+    {   
+        //壁に当たったエフェクト
         if (other.gameObject.tag == "Wall")
         { 
             shock_wave.transform.position = this.transform.position;
             shock_wave.Play();
         }
+        //コインのエフェクト
         if (other.gameObject.tag == "cube")
         {
             sparkle.transform.position = this.transform.position;
