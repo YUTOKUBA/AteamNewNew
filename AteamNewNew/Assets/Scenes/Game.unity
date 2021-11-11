@@ -6786,9 +6786,9 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-<<<<<<< HEAD
+
     m_SensorSize: {x: 2.4679666, y: 1}
-=======
+
     m_SensorSize: {x: 2.0963855, y: 1}
 >>>>>>> higa
   m_Transitions:
@@ -6806,10 +6806,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656437992}
-<<<<<<< HEAD
+
   m_LocalRotation: {x: -0.4500872, y: 0.0000000024924505, z: 0.0000000012562591, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
-=======
+
   m_LocalRotation: {x: 0.31765613, y: -0.000000023630886, z: 0.000000007916525, w: 0.948206}
   m_LocalPosition: {x: 0, y: 4, z: -2.65}
 >>>>>>> higa
@@ -7089,7 +7089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556c0118ffc61694a9c94fbf57c078ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
+
   speed: 0
   add_speed: 0.445
   decelerate_speed: 0.6
@@ -7099,7 +7099,7 @@ MonoBehaviour:
   decelerate: 0
   stop_0: 1
   change: 0
-=======
+
   speed: 90
   back_speed: 60
 >>>>>>> higa
@@ -7586,10 +7586,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c516dbf97eced94daae32cc5d42e846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
+
   sound: {fileID: 8300000, guid: 7da886a070ddeee4ba6bc0fd415e462c, type: 3}
 --- !u!1 &944033102
-=======
+
 --- !u!1 &946646194
 >>>>>>> higa
 GameObject:
@@ -7945,7 +7945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f205801042e0f1e4ba9d467dddc5a999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
+
   sound: {fileID: 8300000, guid: c952c74dd0dfb5c44b632b0c5564c936, type: 3}
 --- !u!1 &1044726613
 GameObject:
@@ -7965,7 +7965,7 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!82 &1044726614
-=======
+
   Oneshotaudio: 0
   cnt: 0
 --- !u!82 &955535063
@@ -7975,13 +7975,13 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
+
   m_GameObject: {fileID: 1044726613}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 24353dbe559990d418b1aed10cbb1924, type: 3}
-=======
+
   m_GameObject: {fileID: 955535057}
   m_Enabled: 1
   serializedVersion: 4
@@ -8073,7 +8073,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< HEAD
+
 --- !u!4 &1044726615
 Transform:
   m_ObjectHideFlags: 0
@@ -8361,7 +8361,7 @@ PrefabInstance:
       objectReference: {fileID: 4300000, guid: 8801006d6478aea478f9320df4476f30, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cd5599e01f32bd418f20a3b9eac1c57, type: 3}
-=======
+
 >>>>>>> higa
 --- !u!1 &1108871585
 GameObject:
@@ -9963,11 +9963,11 @@ RectTransform:
   m_Father: {fileID: 1364697204}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
+
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 183.4, y: -51.399994}
-=======
+
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -292, y: 180.8}
@@ -10650,8 +10650,8 @@ GameObject:
   - component: {fileID: 1757665364}
   - component: {fileID: 1757665363}
   - component: {fileID: 1757665362}
-<<<<<<< HEAD
-=======
+
+
   - component: {fileID: 1757665365}
   - component: {fileID: 1757665366}
 >>>>>>> higa
@@ -10736,8 +10736,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757665360}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
-=======
+
+
 --- !u!114 &1757665365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10953,11 +10953,11 @@ RectTransform:
   m_Father: {fileID: 1364697204}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 45, y: 45, z: 45}
-<<<<<<< HEAD
+
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 64, y: -47}
-=======
+
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -416, y: 188}
@@ -11102,10 +11102,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776901729}
-<<<<<<< HEAD
+
   m_LocalRotation: {x: -0.4500872, y: 0.0000000024924505, z: 0.0000000012562591, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
-=======
+
   m_LocalRotation: {x: 0.31765613, y: -0.000000023630886, z: 0.000000007916525, w: 0.948206}
   m_LocalPosition: {x: 0, y: 4, z: -2.65}
 >>>>>>> higa
@@ -11623,11 +11623,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f205801042e0f1e4ba9d467dddc5a999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
+
   sound: {fileID: 8300000, guid: c952c74dd0dfb5c44b632b0c5564c936, type: 3}
 --- !u!1 &2009286240
 GameObject:
-=======
+
   Oneshotaudio: 0
   cnt: 0
 --- !u!82 &1957291857
@@ -11637,7 +11637,7 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
+
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2009286244}
@@ -12007,7 +12007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a74647b962f38514cacceb36cadfce8f, type: 3}
-=======
+
   m_GameObject: {fileID: 1957291851}
   m_Enabled: 1
   serializedVersion: 4
