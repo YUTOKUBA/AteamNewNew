@@ -4,9 +4,32 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour {
 
-    public AudioClip sound;
+    //public AudioClip sound;
+    private bool flg;
+    private int con;
 
-    void OnCollisionEnter(Collision collision) {
-        AudioSource.PlayClipAtPoint(sound, transform.position);
+    private void Start()
+    {
+        flg = false;
+        con = 0;
+    }
+    private void Update()
+    {
+        if (flg == false)
+        {
+            if (con >= 60)
+            {
+                con++;
+                Debug.Log(con);
+            }
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            
+            flg = true;
+        }
     }
 }
