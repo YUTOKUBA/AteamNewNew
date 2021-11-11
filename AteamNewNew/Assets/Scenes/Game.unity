@@ -10014,8 +10014,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575959304}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &1621787768
 GameObject:
   m_ObjectHideFlags: 0
@@ -10126,7 +10124,6 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 2059482026}
   m_PrefabAsset: {fileID: 0}
->>>>>>> ooishi
 --- !u!1 &1635583613
 GameObject:
   m_ObjectHideFlags: 0
