@@ -23,7 +23,7 @@ public class PlayerAudio : MonoBehaviour {
         if (flg == true)
         {
             cnt++;
-            Debug.Log(cnt);
+           // Debug.Log(cnt);
         }
         //cntが60より多くなったら音楽を止めてオブジェクトを消す。
         if(cnt >= 30)        
