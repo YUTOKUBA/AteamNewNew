@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour {
 
-    //public AudioClip sound;
+    AudioSource audiosource;
+
+    private AudioClip sound;
+    private AudioClip play;
     private bool flg;
     private int con;
 
     private void Start()
     {
+        audiosource = GetComponent<AudioSource>();
         flg = false;
         con = 0;
     }
     private void Update()
     {
-        if (flg == false)
+        if (flg == true)
         {
+            audiosource.Play();
+            con++;
+            Debug.Log(con);
             if (con >= 60)
             {
-                con++;
-                Debug.Log(con);
+                
+               
             }
         }
     }
@@ -28,8 +35,9 @@ public class PlayerAudio : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            
-            flg = true;
+            //audiosource.Stop();
+            Destroy(gameObject);
+            flg = false;
         }
     }
 }
