@@ -6359,7 +6359,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8848314, y: 1}
+    m_SensorSize: {x: 1.90625, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6375,7 +6375,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656437992}
-  m_LocalRotation: {x: -0.4500872, y: 0.0000000023521967, z: 0.0000000011855675, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.0000000040699337, z: -0.0000000020513509,
+    w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10055,6 +10056,7 @@ GameObject:
   - component: {fileID: 1775623000}
   - component: {fileID: 1775622999}
   - component: {fileID: 1775622998}
+  - component: {fileID: 1775623001}
   m_Layer: 5
   m_Name: Coin_Icon
   m_TagString: Untagged
@@ -10141,6 +10143,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775622996}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!111 &1775623001
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775622996}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 1b432fdd873619b41b830ffb14c5b594, type: 2}
+  m_Animations:
+  - {fileID: 0}
+  - {fileID: 7400000, guid: 1b432fdd873619b41b830ffb14c5b594, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1776901729
 GameObject:
   m_ObjectHideFlags: 0
@@ -10219,7 +10238,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776901729}
-  m_LocalRotation: {x: -0.4500872, y: 0.0000000023521967, z: 0.0000000011855675, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.0000000040699337, z: -0.0000000020513509,
+    w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
