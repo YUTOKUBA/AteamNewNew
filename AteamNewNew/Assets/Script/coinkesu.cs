@@ -11,8 +11,8 @@ public class coinkesu : MonoBehaviour
         if (collision.gameObject.tag == "cube")
         {
             coin++;
-            //// 衝突した相手オブジェクトを削除する
-            //Destroy(collision.gameObject);
+            // 衝突した相手オブジェクトを削除する
+            Destroy(collision.gameObject);
         }
     }
 }
