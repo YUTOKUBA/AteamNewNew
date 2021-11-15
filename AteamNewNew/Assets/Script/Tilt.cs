@@ -13,6 +13,12 @@ public class Tilt : MonoBehaviour
     public bool stop_0 = true;
     public bool change = false;
 
+
+    void Start()
+    {
+
+    }
+
     void Update()
     {
         step = speed * Time.deltaTime;
