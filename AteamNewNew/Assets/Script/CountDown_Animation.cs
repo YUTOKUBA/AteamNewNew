@@ -21,5 +21,6 @@ public class CountDown_Animation : MonoBehaviour
         //カウントダウン終了後に行いたい処理
         Time.timeScale = 1.0f;
         var.Start_flg = false;
+        var.BGM_flg = true;
     }
 }

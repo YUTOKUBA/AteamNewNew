@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     //スタート画面
     public bool Start_flg;                 //スタートフラグ
 
+    [SerializeField] private AudioSource BGM_Audio;          //SE用のオーディオソース
+    public bool BGM_flg;
+
     //時間経過
     [SerializeField]private int minute;
     [SerializeField] private int Clear_minute;
@@ -20,6 +23,11 @@ public class GameManager : MonoBehaviour
     public RectTransform pauseCursor;           //カーソル
     int Menu_Num = 0;   //メニュー選択時の番号　0:リスタート 1:タイトル 2:終了
     bool Push_Flg = false; //連続入力防止用スイッチ
+
+    [SerializeField] private AudioClip cursor_sound;    //カーソルのSE
+    [SerializeField] private AudioClip select_sound;    //セレクト時のSE
+    [SerializeField] private AudioSource cursorAudio;   //SE用のオーディオソース
+
 
     //スコア表示
     GameObject Ball;    //スコアが入っているオブジェクト
@@ -55,6 +63,7 @@ public class GameManager : MonoBehaviour
     {
         //スタート条件の初期化
         Start_flg = true;
+        BGM_flg = false;
 
         //経過時間の初期化
         minute = 0;
@@ -74,6 +83,10 @@ public class GameManager : MonoBehaviour
         retryUI.SetActive(false);
         x_object.SetActive(false);
         y_object.SetActive(false);
+
+        //SE設定
+        //cursorAudio = GetComponent<AudioSource>();
+        //BGM_Audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -83,6 +96,13 @@ public class GameManager : MonoBehaviour
         {
             Game_Start();
         }
+
+        if (BGM_flg == true)
+        {
+            BGM_Audio.Play();
+            BGM_flg = false;
+        }
+
         Pause_Controller();
 
         //スコアの取得と表示
@@ -132,11 +152,13 @@ public class GameManager : MonoBehaviour
         //　ポーズUIが表示されてる時は停止
         if (pauseUI.activeSelf)
         {
+            BGM_Audio.Pause();
             Time.timeScale = 0f;
             //　ポーズUIが表示されてなければ通常通り進行
         }
         else
         {
+            BGM_Audio.UnPause();
             Time.timeScale = 1f;
         }
         
@@ -163,6 +185,8 @@ public class GameManager : MonoBehaviour
                         pauseCursor.position += new Vector3(0, 180, 0);
                     }
                     pauseCursor.position += new Vector3(0, -60, 0);
+
+                    cursorAudio.PlayOneShot(cursor_sound);
                     Debug.Log(Menu_Num);
                 }
             }
@@ -178,6 +202,8 @@ public class GameManager : MonoBehaviour
                         pauseCursor.position += new Vector3(0, -180, 0);
                     }
                     pauseCursor.position += new Vector3(0, 60, 0);
+
+                    cursorAudio.PlayOneShot(cursor_sound);
                     Debug.Log(Menu_Num);
                 }
             }
@@ -205,16 +231,19 @@ public class GameManager : MonoBehaviour
             }
             if (Menu_Num == 0 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
                 Application.LoadLevel("Game");
             }
             else if (Menu_Num == 1 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
                 Application.LoadLevel("Title");
             }
             else if (Menu_Num == 2 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
                 pauseUI.SetActive(!pauseUI.activeSelf);
                 // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
@@ -298,6 +327,8 @@ public class GameManager : MonoBehaviour
                         retryCursor.position += new Vector3(0, 180, 0);
                     }
                     retryCursor.position += new Vector3(0, -60, 0);
+
+                    cursorAudio.PlayOneShot(cursor_sound);
                     Debug.Log(Retry_Num);
                 }
             }
@@ -313,6 +344,8 @@ public class GameManager : MonoBehaviour
                         retryCursor.position += new Vector3(0, -180, 0);
                     }
                     retryCursor.position += new Vector3(0, 60, 0);
+
+                    cursorAudio.PlayOneShot(cursor_sound);
                     Debug.Log(Retry_Num);
                 }
             }
