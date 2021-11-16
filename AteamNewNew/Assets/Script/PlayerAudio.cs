@@ -4,40 +4,41 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour {
 
-    AudioSource audiosource;
+    AudioSource audioSource;
+   
 
-    private AudioClip sound;
-    private AudioClip play;
-    private bool flg;
-    private int con;
-
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        audiosource = GetComponent<AudioSource>();
-        flg = false;
-        con = 0;
+        audioSource = GetComponent<AudioSource>();
+        StartCoroutine("cube");
+        Debug.Log("コルーチンを実施中です");
     }
-    private void Update()
+
+    // Update is called once per frame
+    void Update()
     {
-        if (flg == true)
-        {
-            audiosource.Play();
-            con++;
-            Debug.Log(con);
-            if (con >= 60)
-            {
-                
-               
-            }
-        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "cube")//ボールが当たるとコルーチンを呼び出し、音を鳴らす。
         {
-            //audiosource.Stop();
-            Destroy(gameObject);
-            flg = false;
+            audioSource.Play();
+            StartCoroutine("cube");
+            Debug.Log("音を鳴らします");
+            
         }
+      
+    }
+
+    private IEnumerator cube()
+    {
+      for (int i = 0; i < 60; i++)
+      {
+            yield return null;
+      }
+        audioSource.Stop();
+        Debug.Log("音を止めています。");
     }
 }
