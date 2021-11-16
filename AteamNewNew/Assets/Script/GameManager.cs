@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     //スタート画面
     public bool Start_flg;                 //スタートフラグ
 
-    [SerializeField] private AudioSource BGM_Audio;          //SE用のオーディオソース
+    [SerializeField] private AudioSource victory_sound;      //クリア時のSE
+    [SerializeField] private AudioSource BGM_Audio;          //BGM用のオーディオソース
     public bool BGM_flg;
 
     //時間経過
@@ -83,10 +85,6 @@ public class GameManager : MonoBehaviour
         retryUI.SetActive(false);
         x_object.SetActive(false);
         y_object.SetActive(false);
-
-        //SE設定
-        //cursorAudio = GetComponent<AudioSource>();
-        //BGM_Audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -132,6 +130,7 @@ public class GameManager : MonoBehaviour
         }
         else if (var.coin == 12)
         {
+            BGM_Audio.Stop();
             Clear_minute = minute;
             Clear_seconds = seconds;
             Game_Clear();
@@ -233,13 +232,13 @@ public class GameManager : MonoBehaviour
             {
                 cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                Application.LoadLevel("Game");
+                SceneManager.LoadSceneAsync("Game");
             }
             else if (Menu_Num == 1 && Input.GetButtonDown("A"))
             {
                 cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                Application.LoadLevel("Title");
+                SceneManager.LoadSceneAsync("Title");
             }
             else if (Menu_Num == 2 && Input.GetButtonDown("A"))
             {
@@ -273,6 +272,7 @@ public class GameManager : MonoBehaviour
         Clear_animator.SetBool("IsCenter", true);   //アニメーションの表示
         if (Clear_particle_flg == false)    //紙吹雪を一度だけ呼び出す
         {
+            victory_sound.Play();
             Clear_particle.Play();
             Clear_particle_flg = true;
         }
@@ -293,6 +293,7 @@ public class GameManager : MonoBehaviour
         //ReStart
         if (Input.GetButtonDown("A"))
         {
+            cursorAudio.PlayOneShot(select_sound);
             clear_UI.SetActive(false);
             Retry_flg = true;
         }
@@ -361,16 +362,19 @@ public class GameManager : MonoBehaviour
             
             if (Retry_Num == 0 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                Application.LoadLevel("Game");
+                SceneManager.LoadSceneAsync("Game");
             }
             else if (Retry_Num == 1 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                Application.LoadLevel("Title");
+                SceneManager.LoadSceneAsync("Title");
             }
             else if (Retry_Num == 2 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
                 // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
                 Application.Quit();
