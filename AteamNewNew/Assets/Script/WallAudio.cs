@@ -22,7 +22,7 @@ public class WallAudio : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")//ボールが当たるとコルーチンを呼び出し音を鳴らす。
         {
             StartCoroutine("Corou4");
             audioSource.Play();
@@ -30,13 +30,13 @@ public class WallAudio : MonoBehaviour
     }
     private IEnumerator Corou4()
     {
-     for(int i = 0; i < 20; i++)
+     for(int i = 0; i < 20; i++)//20fの間鳴らす。
         {
             
             yield return null;
         }
         audioSource.Stop();
-
+        Debug.Log("音を止めています。");
     }
 
 }
