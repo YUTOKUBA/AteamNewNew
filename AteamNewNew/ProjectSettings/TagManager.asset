@@ -7,6 +7,7 @@ TagManager:
   - cube
   - Wall
   - Floor
+  - jama
   layers:
   - Default
   - TransparentFX

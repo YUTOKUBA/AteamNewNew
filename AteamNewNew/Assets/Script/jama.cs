@@ -1,0 +1,24 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class jama: MonoBehaviour
+{
+    void restart()
+    {
+        gameObject.GetComponent<Rigidbody>().Resume(gameObject);
+    }
+        
+    void OnCollisionEnter(Collision collision)
+    {
+        // もし衝突した相手オブジェクトの名前が"Cube"ならば
+        if (collision.gameObject.tag == "jama")
+        {
+            gameObject.GetComponent<Rigidbody>().Pause(gameObject);
+            // 衝突した相手オブジェクトを削除する
+            Destroy(collision.gameObject);
+           Invoke("restart", 3);
+        }
+        
+    }
+}
