@@ -21,6 +21,7 @@ public class Tilt : MonoBehaviour
 
     void Update()
     {
+
         step = speed * Time.deltaTime;
 
         if (Input.GetAxisRaw("L_Stick_Y") != 0 || Input.GetAxisRaw("L_Stick_X") != 0)
