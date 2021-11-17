@@ -23,6 +23,5 @@ public class Ball : MonoBehaviour
         {
             rb.AddForce(force);
         }
-
     }
 }

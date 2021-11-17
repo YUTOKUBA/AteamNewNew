@@ -436,6 +436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 838762091}
+  - component: {fileID: 838762093}
   - component: {fileID: 838762092}
   m_Layer: 0
   m_Name: DODAI
@@ -472,8 +473,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556c0118ffc61694a9c94fbf57c078ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 82
-  back_speed: 125
+  speed: 0
+  add_speed: 0.445
+  decelerate_speed: 0.6
+  max_speed: 36
+  step: 0
+  stop: 1
+  decelerate: 0
+  stop_0: 1
+  change: 0
+--- !u!114 &838762093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838762090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a8e3406f695d0438424d16d0e66132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &906651065
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +923,7 @@ GameObject:
   - component: {fileID: 1387464634}
   - component: {fileID: 1387464633}
   - component: {fileID: 1387464632}
-  - component: {fileID: 1387464636}
+  - component: {fileID: 1387464631}
   m_Layer: 0
   m_Name: dodai
   m_TagString: Untagged
@@ -911,6 +931,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &1387464631
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387464630}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &1387464632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -985,22 +1021,6 @@ Transform:
   m_Father: {fileID: 838762091}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1387464636
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387464630}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1478617610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1067,7 @@ GameObject:
   - component: {fileID: 1515312595}
   - component: {fileID: 1515312594}
   - component: {fileID: 1515312593}
-  - component: {fileID: 1515312597}
+  - component: {fileID: 1515312592}
   - component: {fileID: 1515312591}
   m_Layer: 0
   m_Name: Ball
@@ -1056,7 +1076,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &1515312591
+--- !u!114 &1515312591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515312590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8a7ecdf6a64e343b18ebd3bcaab18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1515312592
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1146,18 +1178,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1515312597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515312590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c8a7ecdf6a64e343b18ebd3bcaab18a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1574011604
 GameObject:
   m_ObjectHideFlags: 0
