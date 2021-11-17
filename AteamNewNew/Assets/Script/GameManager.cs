@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]private GameObject clear_UI;    //クリア画面
     [SerializeField] private ParticleSystem Clear_particle; //紙吹雪のパーティクル
     bool Clear_particle_flg;        //パーティクルのフラグ
-    bool Clear_flg;                 //クリアフラグ
+    public bool Clear_flg;                 //クリアフラグ
 
     //リザルト画面
     public GameObject Score_coin;    //表示用

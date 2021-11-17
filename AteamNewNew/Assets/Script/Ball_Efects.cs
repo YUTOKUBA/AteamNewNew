@@ -18,9 +18,23 @@ public class Ball_Efects : MonoBehaviour
     private AudioSource fall_Audio;
 
     private Rigidbody rb;
+
+    GameObject gamemanager;    //flgが入っているオブジェクト
+    GameManager var;       //空箱
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        gamemanager = GameObject.Find("GameManager");
+        var = gamemanager.GetComponent<GameManager>();
+
+        if (var.Clear_flg == true)
+        {
+            Rolling_Audio.Stop();
+        }
     }
 
     void OnCollisionStay(Collision col)
