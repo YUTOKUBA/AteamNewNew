@@ -12,10 +12,29 @@ public class Ball_Efects : MonoBehaviour
     [SerializeField]
     private ParticleSystem sparkle;     //コインを取得した際のエフェクト
 
+    [SerializeField]
+    private AudioSource Rolling_Audio;
+    [SerializeField]
+    private AudioSource fall_Audio;
+
     private Rigidbody rb;
+
+    GameObject gamemanager;    //flgが入っているオブジェクト
+    GameManager var;       //空箱
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        gamemanager = GameObject.Find("GameManager");
+        var = gamemanager.GetComponent<GameManager>();
+
+        if (var.Clear_flg == true)
+        {
+            Rolling_Audio.Stop();
+        }
     }
 
     void OnCollisionStay(Collision col)
@@ -29,6 +48,7 @@ public class Ball_Efects : MonoBehaviour
                 // 再生
                 if (!footSmoke.isEmitting)
                 {
+                    Rolling_Audio.Play();
                     footSmoke.Play();
                 }
             }
@@ -37,6 +57,7 @@ public class Ball_Efects : MonoBehaviour
                 // 停止
                 if (footSmoke.isEmitting)
                 {
+                    Rolling_Audio.Stop();
                     footSmoke.Stop();
                 }
             }
@@ -55,6 +76,11 @@ public class Ball_Efects : MonoBehaviour
         {
             sparkle.transform.position = this.transform.position;
             sparkle.Play();
+        }
+
+        if (other.gameObject.tag == "Floor")
+        {
+            fall_Audio.Play();
         }
     }
 }

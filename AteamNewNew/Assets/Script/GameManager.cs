@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     //スタート画面
     public bool Start_flg;                 //スタートフラグ
+
+    [SerializeField] private AudioSource victory_sound;      //クリア時のSE
+    [SerializeField] private AudioSource BGM_Audio;          //BGM用のオーディオソース
+    public bool BGM_flg;
 
     //時間経過
     [SerializeField]private int minute;
@@ -21,6 +26,11 @@ public class GameManager : MonoBehaviour
     int Menu_Num = 0;   //メニュー選択時の番号　0:リスタート 1:タイトル 2:終了
     bool Push_Flg = false; //連続入力防止用スイッチ
 
+    [SerializeField] private AudioClip cursor_sound;    //カーソルのSE
+    [SerializeField] private AudioClip select_sound;    //セレクト時のSE
+    [SerializeField] private AudioSource cursorAudio;   //SE用のオーディオソース
+
+
     //スコア表示
     GameObject Ball;    //スコアが入っているオブジェクト
     coinkesu var;       //空箱
@@ -30,7 +40,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]private GameObject clear_UI;    //クリア画面
     [SerializeField] private ParticleSystem Clear_particle; //紙吹雪のパーティクル
     bool Clear_particle_flg;        //パーティクルのフラグ
-    bool Clear_flg;                 //クリアフラグ
+    public bool Clear_flg;                 //クリアフラグ
 
     //リザルト画面
     public GameObject Score_coin;    //表示用
@@ -55,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         //スタート条件の初期化
         Start_flg = true;
+        BGM_flg = false;
 
         //経過時間の初期化
         minute = 0;
@@ -83,6 +94,13 @@ public class GameManager : MonoBehaviour
         {
             Game_Start();
         }
+
+        if (BGM_flg == true)
+        {
+            BGM_Audio.Play();
+            BGM_flg = false;
+        }
+
         Pause_Controller();
 
         //スコアの取得と表示
@@ -112,6 +130,7 @@ public class GameManager : MonoBehaviour
         }
         else if (var.coin == 12)
         {
+            BGM_Audio.Stop();
             Clear_minute = minute;
             Clear_seconds = seconds;
             Game_Clear();
@@ -132,11 +151,13 @@ public class GameManager : MonoBehaviour
         //　ポーズUIが表示されてる時は停止
         if (pauseUI.activeSelf)
         {
+            BGM_Audio.Pause();
             Time.timeScale = 0f;
             //　ポーズUIが表示されてなければ通常通り進行
         }
         else
         {
+            BGM_Audio.UnPause();
             Time.timeScale = 1f;
         }
         
@@ -163,6 +184,8 @@ public class GameManager : MonoBehaviour
                         pauseCursor.position += new Vector3(0, 180, 0);
                     }
                     pauseCursor.position += new Vector3(0, -60, 0);
+
+                    cursorAudio.PlayOneShot(cursor_sound);
                     Debug.Log(Menu_Num);
                 }
             }
@@ -178,6 +201,8 @@ public class GameManager : MonoBehaviour
                         pauseCursor.position += new Vector3(0, -180, 0);
                     }
                     pauseCursor.position += new Vector3(0, 60, 0);
+
+                    cursorAudio.PlayOneShot(cursor_sound);
                     Debug.Log(Menu_Num);
                 }
             }
@@ -205,16 +230,19 @@ public class GameManager : MonoBehaviour
             }
             if (Menu_Num == 0 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                Application.LoadLevel("Game");
+                SceneManager.LoadSceneAsync("Game");
             }
             else if (Menu_Num == 1 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                Application.LoadLevel("Title");
+                SceneManager.LoadSceneAsync("Title");
             }
             else if (Menu_Num == 2 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
                 pauseUI.SetActive(!pauseUI.activeSelf);
                 // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
@@ -244,6 +272,7 @@ public class GameManager : MonoBehaviour
         Clear_animator.SetBool("IsCenter", true);   //アニメーションの表示
         if (Clear_particle_flg == false)    //紙吹雪を一度だけ呼び出す
         {
+            victory_sound.Play();
             Clear_particle.Play();
             Clear_particle_flg = true;
         }
@@ -264,6 +293,7 @@ public class GameManager : MonoBehaviour
         //ReStart
         if (Input.GetButtonDown("A"))
         {
+            cursorAudio.PlayOneShot(select_sound);
             clear_UI.SetActive(false);
             Retry_flg = true;
         }
@@ -298,6 +328,8 @@ public class GameManager : MonoBehaviour
                         retryCursor.position += new Vector3(0, 180, 0);
                     }
                     retryCursor.position += new Vector3(0, -60, 0);
+
+                    cursorAudio.PlayOneShot(cursor_sound);
                     Debug.Log(Retry_Num);
                 }
             }
@@ -313,6 +345,8 @@ public class GameManager : MonoBehaviour
                         retryCursor.position += new Vector3(0, -180, 0);
                     }
                     retryCursor.position += new Vector3(0, 60, 0);
+
+                    cursorAudio.PlayOneShot(cursor_sound);
                     Debug.Log(Retry_Num);
                 }
             }
@@ -328,16 +362,19 @@ public class GameManager : MonoBehaviour
             
             if (Retry_Num == 0 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                Application.LoadLevel("Game");
+                SceneManager.LoadSceneAsync("Game");
             }
             else if (Retry_Num == 1 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                Application.LoadLevel("Title");
+                SceneManager.LoadSceneAsync("Title");
             }
             else if (Retry_Num == 2 && Input.GetButtonDown("A"))
             {
+                cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
                 // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
                 Application.Quit();
