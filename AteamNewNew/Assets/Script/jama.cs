@@ -17,7 +17,8 @@ public class jama: MonoBehaviour
             gameObject.GetComponent<Rigidbody>().Pause(gameObject);
             // 衝突した相手オブジェクトを削除する
             Destroy(collision.gameObject);
-           Invoke("restart", 3);
+            //動きを再開
+            Invoke("restart", 1.5f);  
         }
         
     }
