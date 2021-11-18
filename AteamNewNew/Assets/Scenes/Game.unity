@@ -6616,7 +6616,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.245783, y: 1}
+    m_SensorSize: {x: 2.3226838, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6632,8 +6632,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656437992}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000012375578, z: -0.0000000062376087,
-    w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.000000021729436, z: -0.000000010952194, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6991,7 +6990,7 @@ GameObject:
   - component: {fileID: 838762093}
   m_Layer: 0
   m_Name: DODAI
-  m_TagString: Untagged
+  m_TagString: Dodai
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9624,6 +9623,7 @@ GameObject:
   - component: {fileID: 1515312598}
   - component: {fileID: 1515312599}
   - component: {fileID: 1515312600}
+  - component: {fileID: 1515312601}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -9787,6 +9787,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dd93da1b12c72e49b426ff317eda727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1515312601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515312590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f069a8835f44524185031c35c121dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1536486635 stripped
@@ -11035,8 +11047,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776901729}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000012375578, z: -0.0000000062376087,
-    w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.000000021729436, z: -0.000000010952194, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

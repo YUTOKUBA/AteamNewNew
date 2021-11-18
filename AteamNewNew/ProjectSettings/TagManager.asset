@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - Floor
   - jama
+  - enemy
+  - Dodai
   layers:
   - Default
   - TransparentFX
