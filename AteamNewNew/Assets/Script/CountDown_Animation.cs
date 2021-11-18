@@ -10,11 +10,13 @@ public class CountDown_Animation : MonoBehaviour
     GameObject gamemanager;    //スコアが入っているオブジェクト
     GameManager var;       //空箱
 
-    public void StartCountDown()
+    public void Ready()
     {
         //カウントダウン開始時に行いたい処理
         Time.timeScale = 0f;
-
+    }
+    public void StartCountDown()
+    {
         count_Audio.Play();
     }
 
