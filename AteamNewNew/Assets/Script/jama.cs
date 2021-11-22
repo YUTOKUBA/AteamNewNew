@@ -11,7 +11,7 @@ public class jama: MonoBehaviour
         
     void OnCollisionEnter(Collision collision)
     {
-        // もし衝突した相手オブジェクトの名前が"Cube"ならば
+        // もし衝突した相手オブジェクトの名前が"jama"ならば
         if (collision.gameObject.tag == "jama")
         {
             gameObject.GetComponent<Rigidbody>().Pause(gameObject);
