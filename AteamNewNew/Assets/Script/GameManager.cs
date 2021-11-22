@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
         y_object.SetActive(false);
     }
 
+    
     void Update()
     {
         //スタート時のアニメーション表示
