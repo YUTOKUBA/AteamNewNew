@@ -6659,7 +6659,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2216868, y: 1}
+    m_SensorSize: {x: 2.3226838, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7031,6 +7031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838762091}
   - component: {fileID: 838762093}
+  - component: {fileID: 838762092}
   m_Layer: 0
   m_Name: DODAI
   m_TagString: Untagged
@@ -7057,6 +7058,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838762092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838762090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f069a8835f44524185031c35c121dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &838762093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9666,6 +9679,7 @@ GameObject:
   - component: {fileID: 1515312598}
   - component: {fileID: 1515312599}
   - component: {fileID: 1515312600}
+  - component: {fileID: 1515312601}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -9829,6 +9843,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dd93da1b12c72e49b426ff317eda727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1515312601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515312590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f069a8835f44524185031c35c121dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1536486635 stripped
