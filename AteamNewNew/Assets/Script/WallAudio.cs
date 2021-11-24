@@ -36,7 +36,7 @@ public class WallAudio : MonoBehaviour
             yield return null;
         }
         audioSource.Stop();
-        Debug.Log("音を止めています。");
+        //Debug.Log("音を止めています。");
     }
 
 }
