@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fall_Stage3: MonoBehaviour
+public class Fall_Stage3 : MonoBehaviour
 {
     void Update()
     {
