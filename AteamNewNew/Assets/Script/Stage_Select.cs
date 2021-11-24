@@ -7,6 +7,7 @@ public class Stage_Select : MonoBehaviour
 {
     [SerializeField] private AudioSource Select_Audio;   //SE用のオーディオソース
     bool Push_Flg = false; //連続入力防止用スイッチ
+    bool Stop_flg = false;
 
     [SerializeField] private AudioSource BGM_Audio;   //SE用のオーディオソース
 
@@ -34,7 +35,7 @@ public class Stage_Select : MonoBehaviour
         float lsv = Input.GetAxis("L_stick_v");
         if (lsh == 1)
         {
-            if (Push_Flg == false)
+            if (Push_Flg == false && Stop_flg == false)
             {
                 if (!coroutineBool)
                 {
@@ -52,7 +53,7 @@ public class Stage_Select : MonoBehaviour
         }
         else if (lsh == -1)
         {
-            if (Push_Flg == false)
+            if (Push_Flg == false && Stop_flg == false)
             {
                 if (!coroutineBool)
                 {
@@ -76,6 +77,7 @@ public class Stage_Select : MonoBehaviour
         {
             Select_Audio.Play();
             IsFadeOut = true;
+            Stop_flg = true;
         }
 
         if (IsFadeOut)
@@ -90,7 +92,22 @@ public class Stage_Select : MonoBehaviour
         }
         if (BGM_Audio.volume == 0.0f)
         {
-            SceneManager.LoadSceneAsync("Game");
+            switch (Stage_num) 
+            {
+                case 0:
+                    SceneManager.LoadSceneAsync("Stage1");
+                    break;
+                case 1:
+                    SceneManager.LoadSceneAsync("Stage2");
+                    break;
+                case 2:
+                    SceneManager.LoadSceneAsync("Stage3");
+                    break;
+                case 3:
+                    SceneManager.LoadSceneAsync("Stage4");
+                    break;
+            }
+
         }
     }
 
