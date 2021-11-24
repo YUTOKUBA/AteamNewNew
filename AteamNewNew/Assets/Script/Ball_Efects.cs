@@ -18,6 +18,8 @@ public class Ball_Efects : MonoBehaviour
     private AudioSource fall_Audio;
     [SerializeField]
     private AudioSource jama_Audio;
+    [SerializeField]
+    private AudioSource otasuke_Audio;
 
     bool fall_oneShot = true;
 
@@ -91,6 +93,10 @@ public class Ball_Efects : MonoBehaviour
         if (other.gameObject.tag == "jama")
         {
             jama_Audio.Play();
+        }
+        if (other.gameObject.tag == "otasuke")
+        {
+            otasuke_Audio.Play();
         }
     }
 }
