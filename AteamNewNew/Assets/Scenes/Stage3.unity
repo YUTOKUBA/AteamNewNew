@@ -996,6 +996,7 @@ GameObject:
   - component: {fileID: 285589395}
   - component: {fileID: 285589394}
   - component: {fileID: 285589393}
+  - component: {fileID: 285589403}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -1174,6 +1175,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285589391}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &285589403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285589391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5857822fa19e67d41a6dbdddc0cbfe92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &292062199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,7 +1464,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329163347}
-  m_LocalRotation: {x: 0.32827157, y: -0.00000003847219, z: 0.000000013370261, w: 0.9445834}
+  m_LocalRotation: {x: 0.3282716, y: -0.0000000147691335, z: 0.0000000051327245, w: 0.9445834}
   m_LocalPosition: {x: 0, y: 2, z: -1.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2732,7 +2745,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712509425}
-  m_LocalRotation: {x: 0.32827157, y: -0.00000003847219, z: 0.000000013370261, w: 0.9445834}
+  m_LocalRotation: {x: 0.3282716, y: -0.0000000147691335, z: 0.0000000051327245, w: 0.9445834}
   m_LocalPosition: {x: 0, y: 2, z: -1.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
