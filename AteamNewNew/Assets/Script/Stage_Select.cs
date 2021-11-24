@@ -10,14 +10,19 @@ public class Stage_Select : MonoBehaviour
 
     [SerializeField] private AudioSource BGM_Audio;   //SE用のオーディオソース
 
-    [SerializeField] private RectTransform Center;
+    [SerializeField] private Transform Center;
 
     public bool IsFade;
     public double FadeOutSeconds = 1.0;
     bool IsFadeOut = false;
     double FadeDeltaTime = 0;
 
-    bool IsRotate = false;
+    //回転中かどうか
+    bool coroutineBool = false;
+
+    int Stage_num = 0;
+
+
     void Start()
     {
         FadeDeltaTime = 0;
@@ -31,16 +36,36 @@ public class Stage_Select : MonoBehaviour
         {
             if (Push_Flg == false)
             {
-                Push_Flg = true;
-                IsRotate = true;
+                if (!coroutineBool)
+                {
+                    coroutineBool = true;
+                    StartCoroutine("RightMove");
+
+                    Push_Flg = true;
+                    Stage_num++;
+                    if (Stage_num >= 4)
+                    {
+                        Stage_num = 0;
+                    }
+                }
             }
         }
         else if (lsh == -1)
         {
             if (Push_Flg == false)
             {
-                Push_Flg = true;
-                Center.transform.Rotate(new Vector3(0, -90, 0));
+                if (!coroutineBool)
+                {
+                    coroutineBool = true;
+                    StartCoroutine("LeftMove");
+
+                    Push_Flg = true;
+                    Stage_num--;
+                    if (Stage_num <= -1)
+                    {
+                        Stage_num = 3;
+                    }
+                }
             }
         }
         else
@@ -51,11 +76,6 @@ public class Stage_Select : MonoBehaviour
         {
             Select_Audio.Play();
             IsFadeOut = true;
-        }
-
-        if (IsRotate)
-        {
-            Center.transform.Rotate(new Vector3(0, 10.0f * Time.deltaTime, 0));
         }
 
         if (IsFadeOut)
@@ -72,5 +92,27 @@ public class Stage_Select : MonoBehaviour
         {
             SceneManager.LoadSceneAsync("Game");
         }
+    }
+
+    //右にゆっくり回転して90°でストップ
+    IEnumerator RightMove()
+    {
+        for (int turn = 0; turn < 90; turn+=5)
+        {
+            transform.Rotate(0, 5, 0);
+            yield return new WaitForSeconds(0.01f);
+        }
+        coroutineBool = false;
+    }
+
+    //左にゆっくり回転して90°でストップ
+    IEnumerator LeftMove()
+    {
+        for (int turn = 0; turn < 90; turn+=5)
+        {
+            transform.Rotate(0, -5, 0);
+            yield return new WaitForSeconds(0.01f);
+        }
+        coroutineBool = false;
     }
 }
