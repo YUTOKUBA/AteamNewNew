@@ -6764,7 +6764,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656437992}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000008984277, z: -0.000000004528306, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.0000000018332306, z: -9.239953e-10, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7120,7 +7120,6 @@ GameObject:
   m_Component:
   - component: {fileID: 838762091}
   - component: {fileID: 838762093}
-  - component: {fileID: 838762092}
   m_Layer: 0
   m_Name: DODAI
   m_TagString: Untagged
@@ -7147,18 +7146,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &838762092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838762090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f069a8835f44524185031c35c121dc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &838762093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11220,7 +11207,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776901729}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000008984277, z: -0.000000004528306, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.0000000018332306, z: -9.239953e-10, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
