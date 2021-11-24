@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveDodaitate : MonoBehaviour
 {
     public int counter = 0;
-    public float move = 0.01f;
+    public float move = 0.002f;
 
     void Update()
     {
@@ -13,7 +13,7 @@ public class MoveDodaitate : MonoBehaviour
         transform.Translate(pos);
         counter++;
 
-        if (counter == 250)
+        if (counter == 50)
         {
             counter = 0;
             move *= -1;
