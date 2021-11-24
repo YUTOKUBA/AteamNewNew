@@ -16,6 +16,10 @@ public class Ball_Efects : MonoBehaviour
     private AudioSource Rolling_Audio;
     [SerializeField]
     private AudioSource fall_Audio;
+    [SerializeField]
+    private AudioSource jama_Audio;
+
+    bool fall_oneShot = true;
 
     private Rigidbody rb;
 
@@ -77,10 +81,16 @@ public class Ball_Efects : MonoBehaviour
             sparkle.transform.position = this.transform.position;
             sparkle.Play();
         }
-
-        if (other.gameObject.tag == "Floor")
+        //地面に衝突した時のSE
+        if (other.gameObject.tag == "Floor" && fall_oneShot == true)
         {
             fall_Audio.Play();
+            fall_oneShot = false;
+        }
+
+        if (other.gameObject.tag == "jama")
+        {
+            jama_Audio.Play();
         }
     }
 }
