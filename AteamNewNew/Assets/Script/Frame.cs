@@ -14,6 +14,6 @@ public class Frame : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(1 / Time.deltaTime);
+        //Debug.Log(1 / Time.deltaTime);
     }
 }
