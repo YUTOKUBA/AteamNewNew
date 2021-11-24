@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private AudioClip cursor_sound;    //カーソルのSE
     [SerializeField] private AudioClip select_sound;    //セレクト時のSE
+    [SerializeField] private AudioClip end_sound;    //セレクト時のSE
     [SerializeField] private AudioSource cursorAudio;   //SE用のオーディオソース
 
 
@@ -233,7 +234,7 @@ public class GameManager : MonoBehaviour
             {
                 cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                SceneManager.LoadSceneAsync("Stage1");
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
             }
             else if (Menu_Num == 1 && Input.GetButtonDown("A"))
             {
@@ -375,7 +376,7 @@ public class GameManager : MonoBehaviour
             }
             else if (Retry_Num == 2 && Input.GetButtonDown("A"))
             {
-                cursorAudio.PlayOneShot(select_sound);
+                cursorAudio.PlayOneShot(end_sound);
                 Time.timeScale = 1f;
                 // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
                 Application.Quit();
