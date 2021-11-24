@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveDodaiYoko2 : MonoBehaviour
 {
     public int counter = 0;
-    public float move = -0.01f;
+    public float move = -0.002f;
     public float move2 = 0f;
 
     void Update()
@@ -21,7 +21,7 @@ public class MoveDodaiYoko2 : MonoBehaviour
         if (counter == 500)
         {
             move = 0;
-            move2 -= 0.01f;
+            move2 -= 0.002f;
         }
         if (counter == 750)
         {
@@ -29,7 +29,7 @@ public class MoveDodaiYoko2 : MonoBehaviour
         }
         if (counter == 1000)
         {
-            move -= 0.01f;
+            move -= 0.002f;
             move2 = 0;
             counter = 0;
         }
