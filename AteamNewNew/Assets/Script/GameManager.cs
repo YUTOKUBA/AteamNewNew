@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
         y_object.SetActive(false);
     }
 
+    
     void Update()
     {
         //スタート時のアニメーション表示
@@ -370,7 +371,7 @@ public class GameManager : MonoBehaviour
             {
                 cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                SceneManager.LoadSceneAsync("Title");
+                SceneManager.LoadScene("Title");
             }
             else if (Retry_Num == 2 && Input.GetButtonDown("A"))
             {
