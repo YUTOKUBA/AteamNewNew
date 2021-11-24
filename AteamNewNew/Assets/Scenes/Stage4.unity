@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &202670392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -987,7 +987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
   move2: 0
 --- !u!1 &221443606
 GameObject:
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &313206330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &313206333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &398842722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &454716098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,7 +1734,7 @@ Transform:
   m_GameObject: {fileID: 547444608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 826575787}
   - {fileID: 804785402}
@@ -2122,7 +2122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!1 &745790516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,7 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &745790519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2592,7 +2592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &816879174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,7 +2700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!1 &826575786
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,7 +3208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
   move2: 0
 --- !u!65 &1143605170
 BoxCollider:
@@ -3410,7 +3410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &1182346037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3644,7 +3644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &1314245054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4095,7 +4095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &1475732034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4483,7 +4483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!1 &1717005509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4531,7 +4531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &1717005512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5043,7 +5043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &2046377302
 GameObject:
   m_ObjectHideFlags: 0
@@ -5184,7 +5184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &2065523332
 BoxCollider:
   m_ObjectHideFlags: 0
