@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveWallYoko : MonoBehaviour
 {
     public int counter = 0;
-    public float move = 0.01f;
+    public float move = 0.002f;
 
     void Update()
     {
