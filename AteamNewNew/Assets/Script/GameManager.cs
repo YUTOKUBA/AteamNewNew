@@ -233,7 +233,7 @@ public class GameManager : MonoBehaviour
             {
                 cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                SceneManager.LoadSceneAsync("Game");
+                SceneManager.LoadSceneAsync("Stage1");
             }
             else if (Menu_Num == 1 && Input.GetButtonDown("A"))
             {
@@ -365,7 +365,7 @@ public class GameManager : MonoBehaviour
             {
                 cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
-                SceneManager.LoadSceneAsync("Game");
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
             }
             else if (Retry_Num == 1 && Input.GetButtonDown("A"))
             {
