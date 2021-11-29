@@ -48,7 +48,7 @@ public class Ball_Efects : MonoBehaviour
         //砂埃エフェクト
         if (col.gameObject.tag == "Floor")
         {
-            // 速度が0.1以上なら
+            // 速度が0.5以上なら
             if (rb.velocity.magnitude > 0.5f)
             {
                 // 再生
