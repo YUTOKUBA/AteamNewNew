@@ -20,6 +20,7 @@ public class coinkesu : MonoBehaviour
             Debug.Log("ok");
             coin++;
             // 衝突した相手オブジェクトを削除する
+            Debug.Log("反応している。");
             Destroy(collision.gameObject);
         }
 

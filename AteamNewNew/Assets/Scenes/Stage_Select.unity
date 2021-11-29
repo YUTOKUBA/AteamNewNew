@@ -724,7 +724,6 @@ GameObject:
   m_Component:
   - component: {fileID: 136136833}
   - component: {fileID: 136136834}
-  - component: {fileID: 136136835}
   m_Layer: 0
   m_Name: Stage_2
   m_TagString: Untagged
@@ -758,18 +757,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57a8e3406f695d0438424d16d0e66132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &136136835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136136832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a60b58f323d9ea4cb11b4acc5156ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &152264099
@@ -1932,7 +1919,6 @@ GameObject:
   - component: {fileID: 440270895}
   - component: {fileID: 440270894}
   - component: {fileID: 440270893}
-  - component: {fileID: 440270896}
   m_Layer: 5
   m_Name: Stage_1
   m_TagString: Untagged
@@ -2023,18 +2009,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440270891}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &440270896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440270891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a60b58f323d9ea4cb11b4acc5156ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &466401505
 GameObject:
   m_ObjectHideFlags: 0
@@ -9235,7 +9209,6 @@ GameObject:
   - component: {fileID: 793257617}
   - component: {fileID: 793257620}
   - component: {fileID: 793257618}
-  - component: {fileID: 793257619}
   m_Layer: 0
   m_Name: Stage_3
   m_TagString: Untagged
@@ -9269,18 +9242,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57a8e3406f695d0438424d16d0e66132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &793257619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793257616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a60b58f323d9ea4cb11b4acc5156ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &793257620
@@ -17230,7 +17191,6 @@ GameObject:
   - component: {fileID: 1360294751}
   - component: {fileID: 1360294754}
   - component: {fileID: 1360294752}
-  - component: {fileID: 1360294753}
   m_Layer: 0
   m_Name: Stage_4
   m_TagString: Untagged
@@ -17271,18 +17231,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1360294753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360294750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a60b58f323d9ea4cb11b4acc5156ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1360294754
 MonoBehaviour:
   m_ObjectHideFlags: 0

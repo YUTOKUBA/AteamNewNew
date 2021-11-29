@@ -11,7 +11,7 @@ public class Fall_Maru : MonoBehaviour
         if (this.transform.position.y < -10)
         {
             rb.velocity = Vector3.zero;
-            GameObject.Find("Ball").transform.position = new Vector3(0, 1.5f, 2f);
+            GameObject.Find("Ball").transform.position = new Vector3(0, 1.5f, 1.8f);
         }
     }
 }
