@@ -6146,7 +6146,6 @@ GameObject:
   - component: {fileID: 68487408}
   - component: {fileID: 68487407}
   - component: {fileID: 68487406}
-  - component: {fileID: 68487405}
   - component: {fileID: 68487404}
   - component: {fileID: 68487403}
   - component: {fileID: 68487402}
@@ -6243,19 +6242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: 0
---- !u!114 &68487405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68487398}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7e3960cfadba945a8cca8298dca52e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
 --- !u!54 &68487406
 Rigidbody:
   m_ObjectHideFlags: 0
