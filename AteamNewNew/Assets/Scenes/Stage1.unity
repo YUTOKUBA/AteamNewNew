@@ -6797,7 +6797,7 @@ GameObject:
   - component: {fileID: 703408249}
   - component: {fileID: 703408250}
   m_Layer: 0
-  m_Name: Fall_sound
+  m_Name: Landing_sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8635,7 +8635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb359f2820bcf0441abeeaae95a6995f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DontDestroyEnabled: 1
 --- !u!82 &1257884021
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9919,12 +9918,11 @@ GameObject:
   - component: {fileID: 1515312594}
   - component: {fileID: 1515312593}
   - component: {fileID: 1515312591}
-  - component: {fileID: 1515312592}
-  - component: {fileID: 1515312597}
   - component: {fileID: 1515312598}
   - component: {fileID: 1515312599}
   - component: {fileID: 1515312600}
   - component: {fileID: 1515312601}
+  - component: {fileID: 1515312592}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -9955,12 +9953,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515312590}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7e3960cfadba945a8cca8298dca52e, type: 3}
+  m_Script: {fileID: 11500000, guid: c26be8cb939c7c841be175bc7d1c4155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  coin: 0
 --- !u!135 &1515312593
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10036,19 +10034,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1515312597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515312590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c26be8cb939c7c841be175bc7d1c4155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coin: 0
 --- !u!114 &1515312598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10077,7 +10062,7 @@ MonoBehaviour:
   shock_wave: {fileID: 1305563727}
   sparkle: {fileID: 1630767351}
   Rolling_Audio: {fileID: 2105280332}
-  fall_Audio: {fileID: 703408250}
+  Landing_Audio: {fileID: 703408250}
   jama_Audio: {fileID: 1840102175}
   otasuke_Audio: {fileID: 1449833106}
 --- !u!114 &1515312600
@@ -12322,7 +12307,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

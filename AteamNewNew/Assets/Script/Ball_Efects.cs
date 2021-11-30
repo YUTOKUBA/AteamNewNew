@@ -15,13 +15,13 @@ public class Ball_Efects : MonoBehaviour
     [SerializeField]
     private AudioSource Rolling_Audio;
     [SerializeField]
-    private AudioSource fall_Audio;
+    private AudioSource Landing_Audio;
     [SerializeField]
     private AudioSource jama_Audio;
     [SerializeField]
     private AudioSource otasuke_Audio;
 
-    bool fall_oneShot = true;
+    bool Landing_oneShot = true;
 
     private Rigidbody rb;
 
@@ -48,7 +48,7 @@ public class Ball_Efects : MonoBehaviour
         //砂埃エフェクト
         if (col.gameObject.tag == "Floor")
         {
-            // 速度が0.1以上なら
+            // 速度が0.5以上なら
             if (rb.velocity.magnitude > 0.5f)
             {
                 // 再生
@@ -84,10 +84,10 @@ public class Ball_Efects : MonoBehaviour
             sparkle.Play();
         }
         //地面に衝突した時のSE
-        if (other.gameObject.tag == "Floor" && fall_oneShot == true)
+        if (other.gameObject.tag == "Floor" && Landing_oneShot == true)
         {
-            fall_Audio.Play();
-            fall_oneShot = false;
+            Landing_Audio.Play();
+            Landing_oneShot = false;
         }
 
         if (other.gameObject.tag == "jama")

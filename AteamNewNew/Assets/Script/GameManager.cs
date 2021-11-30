@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     //スコア表示
     GameObject Ball;    //スコアが入っているオブジェクト
     coinkesu var;       //空箱
+    Sincoinkesu var2;       //空箱
     public GameObject Score;    //表示用
 
     //クリア
@@ -107,9 +108,17 @@ public class GameManager : MonoBehaviour
 
         //スコアの取得と表示
         Ball = GameObject.Find("Ball");
-        var = Ball.GetComponent<coinkesu>();
-        Text score = Score.GetComponent<Text>();
-        score.text = var.coin + " / 12";
+        if (SceneManager.GetActiveScene().name == "Stage4")
+        {
+            var2 = Ball.GetComponent<Sincoinkesu>();
+            Text score = Score.GetComponent<Text>();
+            score.text = var2.coin + " / 12";
+        }
+        else{
+            var = Ball.GetComponent<coinkesu>();
+            Text score = Score.GetComponent<Text>();
+            score.text = var.coin + " / 12";
+        }
 
         //経過時間の計測
         seconds += Time.deltaTime;
