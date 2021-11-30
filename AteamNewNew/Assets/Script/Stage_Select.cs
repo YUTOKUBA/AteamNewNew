@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Stage_Select : MonoBehaviour
 {
+    [SerializeField] private AudioClip cursor_sound;    //カーソルのSE
+    [SerializeField] private AudioClip select_sound;    //セレクト時のSE
     [SerializeField] private AudioSource Select_Audio;   //SE用のオーディオソース
     bool Push_Flg = false; //連続入力防止用スイッチ
     bool Stop_flg = false;
@@ -48,6 +50,7 @@ public class Stage_Select : MonoBehaviour
                     {
                         Stage_num = 0;
                     }
+                    Select_Audio.PlayOneShot(cursor_sound);
                 }
             }
         }
@@ -66,6 +69,7 @@ public class Stage_Select : MonoBehaviour
                     {
                         Stage_num = 3;
                     }
+                    Select_Audio.PlayOneShot(cursor_sound);
                 }
             }
         }
@@ -75,7 +79,7 @@ public class Stage_Select : MonoBehaviour
         }
         if (Input.GetButtonDown("A"))
         {
-            Select_Audio.Play();
+            Select_Audio.PlayOneShot(select_sound);
             IsFadeOut = true;
             Stop_flg = true;
         }

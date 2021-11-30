@@ -6,7 +6,7 @@ public class Fall_Maru : MonoBehaviour
 {
 
     [SerializeField]
-    private AudioSource Respown_Audio;
+    private AudioSource Fall_Audio;
     bool one_sound = false;
     void Update()
     {
@@ -15,7 +15,7 @@ public class Fall_Maru : MonoBehaviour
         if (this.transform.position.y < -2)
         {
             if (one_sound == false) {
-                Respown_Audio.Play();
+                Fall_Audio.Play();
                 one_sound = true;
             }
         }

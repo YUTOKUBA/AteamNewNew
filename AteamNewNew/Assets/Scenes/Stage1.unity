@@ -6765,7 +6765,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656437992}
-  m_LocalRotation: {x: -0.4500872, y: 0.000000021729441, z: 0.0000000109521965, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.000000021729436, z: -0.000000010952194, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6797,7 +6797,7 @@ GameObject:
   - component: {fileID: 703408249}
   - component: {fileID: 703408250}
   m_Layer: 0
-  m_Name: Fall_sound
+  m_Name: Landing_sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10062,7 +10062,7 @@ MonoBehaviour:
   shock_wave: {fileID: 1305563727}
   sparkle: {fileID: 1630767351}
   Rolling_Audio: {fileID: 2105280332}
-  fall_Audio: {fileID: 703408250}
+  Landing_Audio: {fileID: 703408250}
   jama_Audio: {fileID: 1840102175}
   otasuke_Audio: {fileID: 1449833106}
 --- !u!114 &1515312600
@@ -11335,7 +11335,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776901729}
-  m_LocalRotation: {x: -0.4500872, y: 0.000000021729441, z: 0.0000000109521965, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.000000021729436, z: -0.000000010952194, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
