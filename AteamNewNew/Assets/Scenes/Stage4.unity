@@ -1848,7 +1848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &202670392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
   move2: 0
 --- !u!1 &221443606
 GameObject:
@@ -2125,7 +2125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &225986068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,7 +2563,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276268919}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000021729438, z: -0.000000010952195, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: 0.00000002172944, z: 0.000000010952196, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2744,7 +2744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &313206333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3309,7 +3309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &398842722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3586,7 +3586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &454716098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,7 +4164,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2216868, y: 1}
+    m_SensorSize: {x: 1.2793018, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4180,7 +4180,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510302615}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000021729438, z: -0.000000010952195, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: 0.00000002172944, z: 0.000000010952196, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4769,7 +4769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!1 &674391457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,7 +5190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &745790519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5820,7 +5820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &816879174
 GameObject:
   m_ObjectHideFlags: 0
@@ -5928,7 +5928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!1 &826575786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7717,7 +7717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
   move2: 0
 --- !u!65 &1143605170
 BoxCollider:
@@ -8163,7 +8163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &1182346037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8534,7 +8534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &1314245054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9635,7 +9635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &1475732034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10336,7 +10336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!1 &1654673307
 GameObject:
   m_ObjectHideFlags: 0
@@ -10750,7 +10750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &1717005512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11925,7 +11925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &2024797881
 GameObject:
   m_ObjectHideFlags: 0
@@ -16838,7 +16838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &2065523332
 BoxCollider:
   m_ObjectHideFlags: 0
