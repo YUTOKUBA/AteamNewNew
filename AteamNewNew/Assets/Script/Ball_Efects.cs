@@ -22,7 +22,10 @@ public class Ball_Efects : MonoBehaviour
     private AudioSource jama_Audio;
     [SerializeField]
     private AudioSource otasuke_Audio;
+    [SerializeField]
+    private AudioSource Fall_Audio;
 
+    bool Fall_oneShot = false;
     bool Landing_oneShot = true;
 
     private Rigidbody rb;
@@ -39,9 +42,39 @@ public class Ball_Efects : MonoBehaviour
         gamemanager = GameObject.Find("GameManager");
         var = gamemanager.GetComponent<GameManager>();
 
+        //落下したら
+        if (this.transform.position.y < -1.5)
+        {
+            if (Fall_oneShot == false)
+            {
+                Fall_Audio.Play();
+                Fall_oneShot = true;
+                Rolling_Audio.Stop();
+                footSmoke.Stop();
+            }
+        }
+        if (this.transform.position.y < -10)
+        {
+            Fall_oneShot = false;
+        }
+
+        //クリアしたら
         if (var.Clear_flg == true)
         {
             Rolling_Audio.Stop();
+            Fall_Audio.Stop();
+        }
+
+        //ポーズ画面中
+        if (var.pause_flg != false)
+        {
+            Rolling_Audio.Pause();
+            Fall_Audio.Pause();
+        }
+        else
+        {
+            Rolling_Audio.UnPause();
+            Fall_Audio.UnPause();
         }
     }
 

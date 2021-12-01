@@ -10,6 +10,8 @@ TagManager:
   - jama
   - zyama
   - otasuke
+  - enemy
+  - Wall Floor
   layers:
   - Default
   - TransparentFX

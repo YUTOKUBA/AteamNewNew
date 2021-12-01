@@ -1248,7 +1248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5857822fa19e67d41a6dbdddc0cbfe92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fall_Audio: {fileID: 1580473924}
 --- !u!114 &285589394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,6 +1280,7 @@ MonoBehaviour:
   Collision_Audio: {fileID: 0}
   jama_Audio: {fileID: 1810826043}
   otasuke_Audio: {fileID: 1066211012}
+  Fall_Audio: {fileID: 1580473924}
 --- !u!114 &285589396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1526,7 +1526,7 @@ GameObject:
   - component: {fileID: 292062201}
   m_Layer: 0
   m_Name: StageDodai
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1852,7 +1852,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 2.2216868, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4316,6 +4316,7 @@ MonoBehaviour:
   Clear_seconds: 0
   pauseUI: {fileID: 1310339258}
   pauseCursor: {fileID: 1893767983}
+  pause_flg: 0
   cursor_sound: {fileID: 8300000, guid: aac128cc19f45fe4597d03eee72abd03, type: 3}
   select_sound: {fileID: 8300000, guid: 35caa8db8aa52554daaea32a23b86bdd, type: 3}
   end_sound: {fileID: 0}

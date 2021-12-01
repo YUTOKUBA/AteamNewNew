@@ -6218,6 +6218,7 @@ MonoBehaviour:
   Collision_Audio: {fileID: 1108908735}
   jama_Audio: {fileID: 1212886746}
   otasuke_Audio: {fileID: 300804289}
+  Fall_Audio: {fileID: 1383333010}
 --- !u!114 &68487403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6331,7 +6332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c730258dea7cd114c8b7f4a6abe8a593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fall_Audio: {fileID: 1383333010}
 --- !u!1 &74163376
 GameObject:
   m_ObjectHideFlags: 0
@@ -7258,7 +7258,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19372
+  m_Name: pb_Mesh29170
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14538,6 +14538,7 @@ MonoBehaviour:
   Clear_seconds: 0
   pauseUI: {fileID: 1611027721}
   pauseCursor: {fileID: 1259615110}
+  pause_flg: 0
   cursor_sound: {fileID: 8300000, guid: aac128cc19f45fe4597d03eee72abd03, type: 3}
   select_sound: {fileID: 8300000, guid: 35caa8db8aa52554daaea32a23b86bdd, type: 3}
   end_sound: {fileID: 0}
@@ -22763,7 +22764,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 2.2216868, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

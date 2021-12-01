@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public RectTransform pauseCursor;           //カーソル
     int Menu_Num = 0;   //メニュー選択時の番号　0:リスタート 1:タイトル 2:終了
     bool Push_Flg = false; //連続入力防止用スイッチ
+    bool Title_flg = false;
+    public bool pause_flg;
 
     [SerializeField] private AudioClip cursor_sound;    //カーソルのSE
     [SerializeField] private AudioClip select_sound;    //セレクト時のSE
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
         //スタート条件の初期化
         Start_flg = true;
         BGM_flg = false;
+        pause_flg = false;
 
         //経過時間の初期化
         minute = 0;
@@ -137,11 +140,11 @@ public class GameManager : MonoBehaviour
         //クリア画面の表示
         if (SceneManager.GetActiveScene().name == "Stage4")
         {
-            if (var2.coin == 12 && Retry_flg == true)
+            if (var2.coin == 12 && Retry_flg == true && Title_flg != true)
             {
                 Retry_menu();
             }
-            else if (var2.coin == 12)
+            else if (var2.coin == 12 && Title_flg != true)
             {
                 BGM_Audio.Stop();
                 Clear_minute = minute;
@@ -151,11 +154,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (var.coin == 12 && Retry_flg == true)
+            if (var.coin == 12 && Retry_flg == true && Title_flg != true)
             {
                 Retry_menu();
             }
-            else if (var.coin == 12)
+            else if (var.coin == 12 && Title_flg != true)
             {
                 BGM_Audio.Stop();
                 Clear_minute = minute;
@@ -179,12 +182,14 @@ public class GameManager : MonoBehaviour
         //　ポーズUIが表示されてる時は停止
         if (pauseUI.activeSelf)
         {
+            pause_flg = true;
             BGM_Audio.Pause();
             Time.timeScale = 0f;
             //　ポーズUIが表示されてなければ通常通り進行
         }
         else
         {
+            pause_flg = false;
             BGM_Audio.UnPause();
             Time.timeScale = 1f;
         }
@@ -264,6 +269,7 @@ public class GameManager : MonoBehaviour
             }
             else if (Menu_Num == 1 && Input.GetButtonDown("A"))
             {
+                Title_flg = true;
                 cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
                 SceneManager.LoadSceneAsync("Title");
@@ -403,6 +409,7 @@ public class GameManager : MonoBehaviour
             }
             else if (Retry_Num == 1 && Input.GetButtonDown("A"))
             {
+                Title_flg = true;
                 cursorAudio.PlayOneShot(select_sound);
                 Time.timeScale = 1f;
                 SceneManager.LoadScene("Title");
