@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 69081974}
   - component: {fileID: 69081973}
   - component: {fileID: 69081972}
+  - component: {fileID: 69081975}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Floor
@@ -654,6 +655,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69081970}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &69081975
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69081970}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &71654988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1113,7 @@ MonoBehaviour:
   sparkle: {fileID: 962689906}
   Rolling_Audio: {fileID: 1795340825}
   Landing_Audio: {fileID: 1350076991}
+  Collision_Audio: {fileID: 0}
   jama_Audio: {fileID: 679629584}
   otasuke_Audio: {fileID: 2000504733}
 --- !u!114 &119632518
@@ -1211,6 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360fd550e5f76594eb6d91a8b8ba6b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fall_Audio: {fileID: 0}
 --- !u!1 &120974669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,7 +1867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &202670392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1922,6 +1941,7 @@ GameObject:
   - component: {fileID: 217969786}
   - component: {fileID: 217969785}
   - component: {fileID: 217969788}
+  - component: {fileID: 217969789}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Floor
@@ -2016,8 +2036,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
   move2: 0
+--- !u!54 &217969789
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217969783}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &221443606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,7 +2161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &225986068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,7 +2599,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276268919}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000004810169, z: -0.000000002424449, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.000000007160589, z: -0.0000000036091186,
+    w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2744,7 +2781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &313206333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3309,7 +3346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &398842722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3586,7 +3623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &454716098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,7 +4201,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.236923, y: 1}
+    m_SensorSize: {x: 1.0897756, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4180,7 +4217,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510302615}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000004810169, z: -0.000000002424449, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: -0.000000007160589, z: -0.0000000036091186,
+    w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4771,7 +4809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!1 &674391457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,7 +5230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &745790519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5265,6 +5303,7 @@ GameObject:
   - component: {fileID: 752515156}
   - component: {fileID: 752515155}
   - component: {fileID: 752515154}
+  - component: {fileID: 752515157}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Floor
@@ -5346,6 +5385,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752515152}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &752515157
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752515152}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &758628692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5822,7 +5877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &816879174
 GameObject:
   m_ObjectHideFlags: 0
@@ -5930,7 +5985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!1 &826575786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7685,6 +7740,7 @@ GameObject:
   - component: {fileID: 1143605171}
   - component: {fileID: 1143605170}
   - component: {fileID: 1143605169}
+  - component: {fileID: 1143605173}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Floor
@@ -7719,7 +7775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
   move2: 0
 --- !u!65 &1143605170
 BoxCollider:
@@ -7781,6 +7837,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143605167}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1143605173
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143605167}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1146279553
 GameObject:
   m_ObjectHideFlags: 0
@@ -8165,7 +8237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &1182346037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8536,7 +8608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: 0.002
 --- !u!65 &1314245054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9735,7 +9807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!65 &1475732034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10385,7 +10457,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1637693659}
-  - component: {fileID: 1637693660}
   m_Layer: 0
   m_Name: Movedodai
   m_TagString: Floor
@@ -10411,22 +10482,6 @@ Transform:
   m_Father: {fileID: 547444609}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1637693660
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637693658}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1638054910
 GameObject:
   m_ObjectHideFlags: 0
@@ -10534,7 +10589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: -0.01
+  move: -0.002
 --- !u!1 &1654673307
 GameObject:
   m_ObjectHideFlags: 0
@@ -10948,7 +11003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &1717005512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12123,7 +12178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!1 &2024797881
 GameObject:
   m_ObjectHideFlags: 0
@@ -17036,7 +17091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  move: 0.01
+  move: 0.002
 --- !u!65 &2065523332
 BoxCollider:
   m_ObjectHideFlags: 0
