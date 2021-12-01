@@ -2565,7 +2565,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276268919}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000021729438, z: -0.000000010952195, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: 0.00000002172944, z: 0.000000010952196, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4168,7 +4168,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2216868, y: 1}
+    m_SensorSize: {x: 2.2246153, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4184,7 +4184,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510302615}
-  m_LocalRotation: {x: -0.4500872, y: -0.000000021729438, z: -0.000000010952195, w: 0.8929846}
+  m_LocalRotation: {x: -0.4500872, y: 0.00000002172944, z: 0.000000010952196, w: 0.8929846}
   m_LocalPosition: {x: 0, y: 2, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10985,9 +10985,10 @@ Animation:
   m_GameObject: {fileID: 1692114278}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: a28d40d7a606a0048affa7f5fb044ac4, type: 2}
+  m_Animation: {fileID: 7400000, guid: 5a71a5a384cae5a40905a28d2d2803e1, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: a28d40d7a606a0048affa7f5fb044ac4, type: 2}
+  - {fileID: 7400000, guid: 5a71a5a384cae5a40905a28d2d2803e1, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
