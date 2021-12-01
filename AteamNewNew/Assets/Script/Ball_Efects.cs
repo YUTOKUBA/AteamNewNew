@@ -17,6 +17,8 @@ public class Ball_Efects : MonoBehaviour
     [SerializeField]
     private AudioSource Landing_Audio;
     [SerializeField]
+    private AudioSource Collision_Audio;
+    [SerializeField]
     private AudioSource jama_Audio;
     [SerializeField]
     private AudioSource otasuke_Audio;
@@ -76,6 +78,7 @@ public class Ball_Efects : MonoBehaviour
         { 
             shock_wave.transform.position = this.transform.position;
             shock_wave.Play();
+            Collision_Audio.Play();
         }
         //コインのエフェクト
         if (other.gameObject.tag == "cube")
