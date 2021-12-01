@@ -133,18 +133,35 @@ public class GameManager : MonoBehaviour
         {
             Game_Pause();
         }
-        
+
         //クリア画面の表示
-        if (var.coin == 12 && Retry_flg == true)
+        if (SceneManager.GetActiveScene().name == "Stage4")
         {
-            Retry_menu();
+            if (var2.coin == 12 && Retry_flg == true)
+            {
+                Retry_menu();
+            }
+            else if (var2.coin == 12)
+            {
+                BGM_Audio.Stop();
+                Clear_minute = minute;
+                Clear_seconds = seconds;
+                Game_Clear();
+            }
         }
-        else if (var.coin == 12)
+        else
         {
-            BGM_Audio.Stop();
-            Clear_minute = minute;
-            Clear_seconds = seconds;
-            Game_Clear();
+            if (var.coin == 12 && Retry_flg == true)
+            {
+                Retry_menu();
+            }
+            else if (var.coin == 12)
+            {
+                BGM_Audio.Stop();
+                Clear_minute = minute;
+                Clear_seconds = seconds;
+                Game_Clear();
+            }
         }
         Retry_Controller();
     }
@@ -299,7 +316,14 @@ public class GameManager : MonoBehaviour
         }
 
         Text score_coin = Score_coin.GetComponent<Text>();//コインの枚数
-        score_coin.text = var.coin + "枚";
+        if (SceneManager.GetActiveScene().name == "Stage4")
+        {
+            score_coin.text = var2.coin + "枚";
+        }
+        else
+        {
+            score_coin.text = var.coin + "枚";
+        }
 
         //ReStart
         if (Input.GetButtonDown("A"))

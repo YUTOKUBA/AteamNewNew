@@ -35,7 +35,7 @@ public class SceneChange : MonoBehaviour
         }
         if (BGM_Audio.volume == 0.0f)
         {
-            SceneManager.LoadSceneAsync("Stage_Select");
+            SceneManager.LoadScene("Stage_Select");
         }
     }
 }

@@ -12,6 +12,7 @@ public class Stage_Select : MonoBehaviour
     bool Stop_flg = false;
 
     [SerializeField] private AudioSource BGM_Audio;   //SE用のオーディオソース
+    bool one_BGM = true;
 
     [SerializeField] private Transform Center;
 
@@ -33,6 +34,11 @@ public class Stage_Select : MonoBehaviour
 
     void Update()
     {
+        if (one_BGM == true)
+        {
+            BGM_Audio.Play();
+            one_BGM = false;
+        }
         float lsh = Input.GetAxis("L_stick_h");
         float lsv = Input.GetAxis("L_stick_v");
         if (lsh == 1)
