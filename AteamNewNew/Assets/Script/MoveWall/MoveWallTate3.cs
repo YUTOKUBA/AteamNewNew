@@ -2,36 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveDodaiYoko : MonoBehaviour
+public class MoveWallTate3 : MonoBehaviour
 {
     public int counter = 0;
     public float move = 0.01f;
-    public float move2 = 0f;
 
     void Update()
     {
-        Vector3 pos = new Vector3(move, 0, move2);
+        Vector3 pos = new Vector3(0, 0, move);
         transform.Translate(pos);
         counter++;
 
         if (counter == 50)
         {
-            move = -0.002f;
+            move *= -1;
+        }
+        if(counter == 200)
+        {
+            move *= -1;
+        }
+        if(counter == 250)
+        {
+            move *= -1;
         }
         if(counter == 300)
         {
-            move = 0;
-            move2 += 0.002f;
+            move *= -1;
         }
         if(counter == 450)
         {
-            move2 *= -1;
+            move *= -1;
         }
-        if(counter == 600)
+        if(counter == 500)
         {
-            move += 0.01f;
-            move2 = 0;
             counter = 0;
+            move *= -1;
         }
     }
 }
