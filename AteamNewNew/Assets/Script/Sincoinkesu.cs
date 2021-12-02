@@ -5,11 +5,12 @@ using UnityEngine;
 public class Sincoinkesu : MonoBehaviour
 {
     public int coin = 0;
+    int x = 0;
     //otasuke = 
 
     void syukusyou()
     {
-        this.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        this.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -28,8 +29,15 @@ public class Sincoinkesu : MonoBehaviour
 
             // 衝突した相手オブジェクトを削除する
             Destroy(collision.gameObject);
-            transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
-            Invoke(nameof(syukusyou), 7.5f);
+            transform.localScale = new Vector3(2f, 2f, 2f);
+            Invoke(nameof(syukusyou),7.5f);
+            if (collision.gameObject.tag == "otasuke")
+            {
+
+                CancelInvoke();
+                Invoke(nameof(syukusyou), 7.5f);
+
+            }
         }
     }
 }
