@@ -22,7 +22,7 @@ public class WallAudio : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Wall")//ボールが当たるとコルーチンを呼び出し音を鳴らす。
+        if (collision.gameObject.tag == "Player")//ボールが当たるとコルーチンを呼び出し音を鳴らす。
         {
             StartCoroutine("Corou4");
             audioSource.Play();
