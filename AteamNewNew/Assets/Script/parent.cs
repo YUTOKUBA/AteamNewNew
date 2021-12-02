@@ -7,6 +7,7 @@ public class parent : MonoBehaviour
     void kaijo()
     {
         this.gameObject.transform.parent = null;    //親子関係を解除
+        transform.parent = GameObject.Find("dodai").transform;
     }
 
     void OnCollisionEnter(Collision collision)
