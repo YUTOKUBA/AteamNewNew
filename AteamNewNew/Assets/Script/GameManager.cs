@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         //スタート条件の初期化
         Start_flg = true;
         BGM_flg = false;
@@ -264,20 +265,17 @@ public class GameManager : MonoBehaviour
             if (Menu_Num == 0 && Input.GetButtonDown("A"))
             {
                 cursorAudio.PlayOneShot(select_sound);
-                Time.timeScale = 1f;
                 SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
             }
             else if (Menu_Num == 1 && Input.GetButtonDown("A"))
             {
                 Title_flg = true;
                 cursorAudio.PlayOneShot(select_sound);
-                Time.timeScale = 1f;
                 SceneManager.LoadSceneAsync("Title");
             }
             else if (Menu_Num == 2 && Input.GetButtonDown("A"))
             {
                 cursorAudio.PlayOneShot(select_sound);
-                Time.timeScale = 1f;
                 pauseUI.SetActive(!pauseUI.activeSelf);
                 // UnityEditor.EditorApplication.isPlaying = false;  //デバッグ用
                 Application.Quit();
