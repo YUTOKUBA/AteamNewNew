@@ -5,6 +5,7 @@ using UnityEngine;
 public class Sincoinkesu : MonoBehaviour
 {
     public int coin = 0;
+    int x = 0;
     //otasuke = 
 
     void syukusyou()
@@ -29,7 +30,14 @@ public class Sincoinkesu : MonoBehaviour
             // 衝突した相手オブジェクトを削除する
             Destroy(collision.gameObject);
             transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
-            Invoke(nameof(syukusyou), 7.5f);
+            Invoke(nameof(syukusyou),7.5f);
+            if (collision.gameObject.tag == "otasuke")
+            {
+
+                CancelInvoke();
+                Invoke(nameof(syukusyou), 7.5f);
+
+            }
         }
     }
 }
