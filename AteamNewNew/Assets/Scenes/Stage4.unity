@@ -589,7 +589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69081970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -1.01, z: 5}
+  m_LocalPosition: {x: -5, y: -1.001, z: 5}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 1637693659}
@@ -1868,7 +1868,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
-  GameManager: {fileID: 0}
 --- !u!65 &202670392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2039,7 +2038,6 @@ MonoBehaviour:
   counter: 0
   move: -0.01
   move2: 0
-  GameManager: {fileID: 0}
 --- !u!54 &217969789
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2164,7 +2162,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
-  GameManager: {fileID: 0}
 --- !u!1 &225986068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,7 +2781,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
-  GameManager: {fileID: 0}
 --- !u!65 &313206333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3384,7 +3380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
-  GameManager: {fileID: 0}
 --- !u!65 &398842722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3630,7 +3625,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
-  GameManager: {fileID: 0}
 --- !u!1 &454716098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4208,7 +4202,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2216868, y: 1}
+    m_SensorSize: {x: 1.985955, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4817,7 +4811,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
-  GameManager: {fileID: 0}
 --- !u!1 &674391457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5369,7 +5362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
-  GameManager: {fileID: 0}
 --- !u!65 &745790519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5458,7 +5450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752515152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -1.01, z: -5}
+  m_LocalPosition: {x: 5, y: -1.001, z: -5}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 1637693659}
@@ -6017,7 +6009,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
-  GameManager: {fileID: 728305179}
 --- !u!1 &816879174
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,7 +6117,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
-  GameManager: {fileID: 0}
 --- !u!1 &826575786
 GameObject:
   m_ObjectHideFlags: 0
@@ -8046,7 +8036,6 @@ MonoBehaviour:
   counter: 0
   move: 0.01
   move2: 0
-  GameManager: {fileID: 0}
 --- !u!65 &1143605170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8508,7 +8497,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
-  GameManager: {fileID: 0}
 --- !u!65 &1182346037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8880,7 +8868,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
-  GameManager: {fileID: 0}
 --- !u!65 &1314245054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10016,7 +10003,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
-  GameManager: {fileID: 0}
 --- !u!65 &1475732034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10799,7 +10785,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
-  GameManager: {fileID: 0}
 --- !u!1 &1654673307
 GameObject:
   m_ObjectHideFlags: 0
@@ -11215,7 +11200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
-  GameManager: {fileID: 0}
 --- !u!65 &1717005512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12359,7 +12343,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
-  GameManager: {fileID: 0}
 --- !u!1 &2024797881
 GameObject:
   m_ObjectHideFlags: 0
@@ -17273,7 +17256,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
-  GameManager: {fileID: 0}
 --- !u!65 &2065523332
 BoxCollider:
   m_ObjectHideFlags: 0
