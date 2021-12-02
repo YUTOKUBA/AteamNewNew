@@ -43,7 +43,7 @@ public class Ball_Efects : MonoBehaviour
         var = gamemanager.GetComponent<GameManager>();
 
         //落下したら
-        if (this.transform.position.y < -1.5)
+        if (this.transform.position.y < -1.5 && this.transform.position.y > -9)
         {
             if (Fall_oneShot == false)
             {
@@ -53,9 +53,10 @@ public class Ball_Efects : MonoBehaviour
                 footSmoke.Stop();
             }
         }
-        if (this.transform.position.y < -10)
+        if (this.transform.position.y <= -9)
         {
             Fall_oneShot = false;
+            Landing_oneShot = true;
         }
 
         //クリアしたら
