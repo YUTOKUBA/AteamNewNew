@@ -7,13 +7,16 @@ public class SceneChange : MonoBehaviour
 {
     [SerializeField] private AudioSource SE_Audio;   //SE用のオーディオソース
     [SerializeField] private AudioSource BGM_Audio;   //SE用のオーディオソース
-    public bool IsFade;
     public double FadeOutSeconds = 1.0;
     bool IsFadeOut = false;
     double FadeDeltaTime = 0;
     void Start()
     {
+        Time.timeScale = 1f;
+        BGM_Audio.volume = 0.5f;
+        FadeOutSeconds = 1.0;
         FadeDeltaTime = 0;
+        IsFadeOut = false;
     }
 
     void Update()
