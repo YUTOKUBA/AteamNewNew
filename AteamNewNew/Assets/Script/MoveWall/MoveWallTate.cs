@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveWallTate : MonoBehaviour
 {
     public int counter = 0;
-    public float move = 0.002f;
+    public float move = 0.01f;
 
     void Update()
     {
@@ -13,7 +13,7 @@ public class MoveWallTate : MonoBehaviour
         transform.Translate(pos);
         counter++;
 
-        if (counter == 250)
+        if (counter == 150)
         {
             counter = 0;
             move *= -1;
