@@ -30,6 +30,11 @@ public class Sincoinkesu : MonoBehaviour
             Destroy(collision.gameObject);
             transform.localScale = new Vector3(2f, 2f, 2f);
             Invoke(nameof(syukusyou), 7.5f);
-        }
+            if (collision.gameObject.tag == "otasuke")
+            {
+                CancelInvoke();
+                Invoke(nameof(syukusyou), 7.5f);
+            }
+            }
     }
 }
