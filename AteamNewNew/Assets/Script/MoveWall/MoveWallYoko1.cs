@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveWallYoko : MonoBehaviour
+public class MoveWallYoko1 : MonoBehaviour
 {
     public int counter = 0;
-    public float move = 0.002f;
+    public float move = 0.01f;
 
     void Update()
     {
@@ -13,7 +13,7 @@ public class MoveWallYoko : MonoBehaviour
         transform.Translate(pos);
         counter++;
 
-        if (counter == 250)
+        if (counter == 150)
         {
             counter = 0;
             move *= -1;
