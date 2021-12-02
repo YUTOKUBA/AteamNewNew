@@ -1868,6 +1868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
+  GameManager: {fileID: 0}
 --- !u!65 &202670392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2038,6 +2039,7 @@ MonoBehaviour:
   counter: 0
   move: -0.01
   move2: 0
+  GameManager: {fileID: 0}
 --- !u!54 &217969789
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2162,6 +2164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
+  GameManager: {fileID: 0}
 --- !u!1 &225986068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2781,6 +2784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
+  GameManager: {fileID: 0}
 --- !u!65 &313206333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3380,6 +3384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
+  GameManager: {fileID: 0}
 --- !u!65 &398842722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3625,6 +3630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
+  GameManager: {fileID: 0}
 --- !u!1 &454716098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4202,7 +4208,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2246153, y: 1}
+    m_SensorSize: {x: 2.2216868, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4811,6 +4817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
+  GameManager: {fileID: 0}
 --- !u!1 &674391457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5362,6 +5369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
+  GameManager: {fileID: 0}
 --- !u!65 &745790519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6009,6 +6017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
+  GameManager: {fileID: 728305179}
 --- !u!1 &816879174
 GameObject:
   m_ObjectHideFlags: 0
@@ -6117,6 +6126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
+  GameManager: {fileID: 0}
 --- !u!1 &826575786
 GameObject:
   m_ObjectHideFlags: 0
@@ -8036,6 +8046,7 @@ MonoBehaviour:
   counter: 0
   move: 0.01
   move2: 0
+  GameManager: {fileID: 0}
 --- !u!65 &1143605170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8497,6 +8508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
+  GameManager: {fileID: 0}
 --- !u!65 &1182346037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8868,6 +8880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
+  GameManager: {fileID: 0}
 --- !u!65 &1314245054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10003,6 +10016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
+  GameManager: {fileID: 0}
 --- !u!65 &1475732034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10785,6 +10799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: -0.01
+  GameManager: {fileID: 0}
 --- !u!1 &1654673307
 GameObject:
   m_ObjectHideFlags: 0
@@ -11200,6 +11215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
+  GameManager: {fileID: 0}
 --- !u!65 &1717005512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12343,6 +12359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
+  GameManager: {fileID: 0}
 --- !u!1 &2024797881
 GameObject:
   m_ObjectHideFlags: 0
@@ -17256,6 +17273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   move: 0.01
+  GameManager: {fileID: 0}
 --- !u!65 &2065523332
 BoxCollider:
   m_ObjectHideFlags: 0
